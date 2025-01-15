@@ -26,6 +26,29 @@ def calculate_ndvi(image: Image.Image, nir_channel=3, red_channel=0) -> Image.Im
 
     return ndvi_colorized
 
+def calculate_evi(image: Image.Image, G: float = 2.5, C1: float = 6, C2: float = 7.5, L: float = 1) -> Image.Image:
+    image_array = np.array(image)
+
+    # Validate image dimensions
+    if image_array.ndim < 3 or image_array.shape[2] < 3:
+        raise ValueError("Input image must have at least three channels for EVI calculation.")
+
+    nir = image_array[:, :, 0].astype(float)  # Assuming NIR is the first channel
+    red = image_array[:, :, 1].astype(float)  # Assuming Red is the second channel
+    blue = image_array[:, :, 2].astype(float)  # Assuming Blue is the third channel
+
+    denominator = nir + C1 * red - C2 * blue + L
+    denominator[denominator == 0] = 1e-5
+
+    evi = G * (nir - red) / denominator
+
+    # Normalize EVI to range [0, 255] for visualization
+    evi_normalized = ((evi + 1) / 2 * 255).clip(0, 255).astype(np.uint8)
+
+    evi_colorized = apply_colormap(evi_normalized)
+
+    return evi_colorized
+
 
 def apply_colormap(ndvi_array: np.ndarray) -> Image.Image:
     colormap = np.zeros((256, 3), dtype=np.uint8)
