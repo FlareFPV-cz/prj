@@ -1,0 +1,67 @@
+from PIL import Image, ImageEnhance
+import numpy as np
+
+def calculate_ndvi(image: Image.Image, nir_channel=3, red_channel=0) -> Image.Image:
+    """
+    Calculate the NDVI (Normalized Difference Vegetation Index) from an input image.
+
+    Parameters:
+    - image: PIL.Image.Image, the input image (assumed to be in RGB(A) or multispectral format).
+    - nir_channel: int, the channel index for Near-Infrared data (default: 3 for NIR).
+    - red_channel: int, the channel index for Red data (default: 0 for Red).
+
+    Returns:
+    - Image.Image: A colorized NDVI image with vegetation areas highlighted.
+    """
+
+    # Convert image to a NumPy array
+    img_array = np.array(image)
+
+    # Validate image has enough channels
+    if img_array.ndim < 3 or img_array.shape[2] <= max(nir_channel, red_channel):
+        raise ValueError("Input image does not have sufficient channels for NDVI calculation.")
+
+    # Extract NIR and Red channels
+    nir = img_array[:, :, nir_channel].astype(float)
+    red = img_array[:, :, red_channel].astype(float)
+
+    # Avoid division by zero
+    denominator = nir + red
+    denominator[denominator == 0] = 1e-5
+
+    # Calculate NDVI
+    ndvi = (nir - red) / denominator
+
+    # Normalize NDVI to range [0, 255] for visualization
+    ndvi_normalized = ((ndvi + 1) / 2 * 255).astype(np.uint8)
+
+    # Apply a color map for better visualization
+    ndvi_colorized = apply_colormap(ndvi_normalized)
+
+    return ndvi_colorized
+
+
+def apply_colormap(ndvi_array: np.ndarray) -> Image.Image:
+    """
+    Apply a color map to an NDVI array for visualization.
+
+    Parameters:
+    - ndvi_array: np.ndarray, normalized NDVI values in the range [0, 255].
+
+    Returns:
+    - Image.Image: A colorized NDVI image.
+    """
+
+    # Define a simple color map (e.g., shades of green and red)
+    colormap = np.zeros((256, 3), dtype=np.uint8)
+    for i in range(256):
+        if i < 128:  # Low NDVI values (e.g., non-vegetation areas)
+            colormap[i] = [255, int(i * 2), 0]  # Gradient from red to yellow
+        else:  # High NDVI values (e.g., vegetation areas)
+            colormap[i] = [int((255 - i) * 2), 255, int((i - 128) * 2)]  # Gradient from yellow to green
+
+    # Map NDVI values to the colormap
+    colorized = colormap[ndvi_array]
+
+    # Return as a PIL Image
+    return Image.fromarray(colorized, mode="RGB")
