@@ -18,6 +18,7 @@
     "leaflet": "^1.9.4",
     "ndarray": "^1.0.19",
     "ndarray-imshow": "^1.0.1",
+    "svelte-leaflet": "^0.2.0",
     "svelte-spa-router": "^4.0.1"
   }
 }

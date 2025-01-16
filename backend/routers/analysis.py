@@ -4,6 +4,8 @@ from PIL import Image
 from pydantic import BaseModel
 import numpy as np
 import io
+from fastapi.responses import FileResponse
+
 
 router = APIRouter()
 
@@ -126,3 +128,9 @@ async def get_index_value(request: IndexRequest):
     index_value = float(index_array[y, x])  # Note: (y, x) for row-column indexing
     
     return {"x": x, "y": y, "index_type": index_type.upper(), "index_value": index_value}
+
+
+@router.get("/get-map/")
+async def get_map(index_type: str):
+    file_path = "output/"+index_type+"_result.png"
+    return FileResponse(file_path, media_type="image/png")

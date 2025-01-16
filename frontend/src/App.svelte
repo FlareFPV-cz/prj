@@ -69,6 +69,7 @@
     <a href="#/">Home</a>
     <a href="#/analysis">Analysis</a>
     <a href="#/index-value">Index Value</a>
+    <a href="#/map">Map</a>
   </div>
 </nav>
 
