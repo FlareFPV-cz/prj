@@ -40,11 +40,17 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px; /* Keep the width constraint */
+  min-width: 1280px;
+  margin: 0 auto;    /* Center horizontally */
+  padding: 2rem;     /* Add some padding */
+  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  display: flex;     /* Use Flexbox for alignment */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start; /* Align children to the top of the page */
 }
+
 
 button {
   border-radius: 8px;

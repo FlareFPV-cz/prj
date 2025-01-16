@@ -14,6 +14,10 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
-    "chart.js": "^4.4.7"
+    "chart.js": "^4.4.7",
+    "leaflet": "^1.9.4",
+    "ndarray": "^1.0.19",
+    "ndarray-imshow": "^1.0.1",
+    "svelte-spa-router": "^4.0.1"
   }
 }
