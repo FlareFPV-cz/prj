@@ -3,8 +3,8 @@
 </script>
 
 <main>
-  <h1>Drone Analysis App</h1>
-  <FileUpload />
+  <h1>Analysis</h1>
+  <FileUpload/>
 </main>
 
 <body>

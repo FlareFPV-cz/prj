@@ -61,6 +61,9 @@
       <option value="ndvi">NDVI</option>
       <option value="evi">EVI</option>
       <option value="savi">SAVI</option>
+      <option value="arvi">ARVI</option>
+      <option value="gndvi">GNDVI</option>
+      <option value="msavi">MSAVI</option>
     </select>
 
     <button type="submit">Get Index Value</button>

@@ -71,39 +71,10 @@
       };
     });
   </script>
-  
-  <style>
-    #map {
-      height: 300px;
-      width: 300px;
-      margin: 0 auto;
-      padding: 0;
-      border: 2px solid #333;
-    }
-  
-    .info-box {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      z-index: 1000;
-      text-align: center;
-    }
-  
-    .controls {
-      margin: 20px auto;
-      text-align: center;
-    }
-  
-    select {
-      padding: 5px;
-      font-size: 14px;
-    }
-  </style>
+
+  <head>
+    <link rel="stylesheet" href="../css/map.css">
+  </head>
   
   <div class="controls">
     <label for="index-type">Select Index Type:</label>
@@ -111,6 +82,9 @@
       <option value="ndvi">NDVI</option>
       <option value="evi">EVI</option>
       <option value="savi">SAVI</option>
+      <option value="arvi">ARVI</option>
+      <option value="gndvi">GNDVI</option>
+      <option value="msavi">MSAVI</option>
     </select>
   </div>
   

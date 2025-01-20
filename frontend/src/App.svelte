@@ -61,6 +61,18 @@
     color: #555;
     line-height: 1.6;
   }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    color: #b0b0b0;
+  }
+
+  footer a {
+    color: #f0b429;
+    text-decoration: none;
+  }
+    
 </style>
 
 <nav>
@@ -76,3 +88,7 @@
 <main>
   <Router {routes} />
 </main>
+
+<footer>
+  <p>&copy; 2025 FLARE PRJ. Built with ❤️ by the Flare FPV team. <a href="https://github.com/Jankozeluh/prj">GitHub</a></p>
+</footer>
