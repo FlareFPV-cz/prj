@@ -1,7 +1,25 @@
 <script>
   import Router from "svelte-spa-router";
   import routes from "./routes";
+  import { onMount } from 'svelte';
+  let isAuthenticated = false;
+
+  function checkAuth() {
+    const token = localStorage.getItem('access_token');
+    isAuthenticated = !!token; // Check if token exists
+  }
+
+  function logout() {
+    localStorage.removeItem('access_token');
+    isAuthenticated = false;
+    window.location.href = "#/"; 
+  }
+
+  onMount(() => {
+    checkAuth(); // Check authentication on load
+  });
 </script>
+
 
 <style>
   /* Navbar Styling */
@@ -78,10 +96,16 @@
 <nav>
   <div class="brand">FLARE PRJ</div>
   <div class="nav-links">
-    <a href="#/">Home</a>
-    <a href="#/analysis">Analysis</a>
-    <a href="#/index-value">Index Value</a>
-    <a href="#/map">Map</a>
+    {#if isAuthenticated}
+      <a href="/">Home</a>
+      <a href="#/analysis">Analysis</a>
+      <a href="#/index-value">Index Value</a>
+      <a href="#/map">Map</a>
+      <button on:click={logout}>Logout</button>
+    {:else}
+      <a href="#/login">Login</a>
+      <!-- <a href="#/signup">Signup</a> -->
+    {/if}
   </div>
 </nav>
 

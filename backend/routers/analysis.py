@@ -1,9 +1,10 @@
-from fastapi import APIRouter, Path, UploadFile, File, HTTPException
-from PIL import Image
-from pydantic import BaseModel
 import numpy as np
+from PIL import Image
+# from typing import Callable
+from pydantic import BaseModel
 from fastapi.responses import FileResponse
-from typing import Callable
+from dependencies.auth import get_current_active_user
+from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends
 
 
 from models.request.index import IndexRequest
@@ -98,3 +99,7 @@ async def get_index_value(request: IndexRequest):
 async def get_map(index_type: str):
     file_path = "output/"+index_type+"_result.png"
     return FileResponse(file_path, media_type="image/png")
+
+@router.get("/protected-data")
+def get_protected_data(current_user=Depends(get_current_active_user)):
+    return {"message": f"Hello {current_user.username}, this is protected data."}
