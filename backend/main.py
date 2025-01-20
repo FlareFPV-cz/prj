@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from routers import analysis
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.security import OAuth2PasswordBearer
+
 
 # Mount the "output" directory to serve static files
 
@@ -21,4 +23,4 @@ app.include_router(analysis.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Drone Analysis App is running"}
+    return {"message": "Analysis App is running"}
