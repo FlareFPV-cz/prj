@@ -66,7 +66,7 @@
 
 <head>
     <link rel="stylesheet" href="../css/login.css">
-  </head>
+</head>
 
 <form on:submit|preventDefault={isSignup ? signup : login}>
     <h2>{isSignup ? "Sign Up" : "Login"}</h2>

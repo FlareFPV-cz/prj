@@ -3,6 +3,7 @@ import Home from "./Home.svelte";
 import Login from "./Login.svelte";
 import Analysis from "./Analysis.svelte";
 import IndexValue from "./IndexValue.svelte";
+import Soil from "./Soil.svelte";
 
 
 const routes = {
@@ -11,6 +12,7 @@ const routes = {
   "/analysis": Analysis, // Analysis page
   "/index-value": IndexValue, // Index Value calculator page
   "/map":Map,
+  "/soil":Soil,
 };
 
 export default routes;

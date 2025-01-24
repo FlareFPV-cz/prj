@@ -101,6 +101,7 @@
       <a href="#/analysis">Analysis</a>
       <a href="#/index-value">Index Value</a>
       <a href="#/map">Map</a>
+      <a href="#/soil">Soil Map</a>
       <button on:click={logout}>Logout</button>
     {:else}
       <a href="#/login">Login</a>

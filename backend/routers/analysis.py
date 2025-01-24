@@ -4,9 +4,13 @@ from PIL import Image
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from dependencies.auth import get_current_active_user
-from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends
+from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends, Query
+import httpx
+from httpx import Timeout
 
 
+
+from models.response.soil import SoilResponse
 from models.request.index import IndexRequest
 from models.response.analyze import (
     AnalysisResponse,
@@ -42,6 +46,17 @@ INDEX_ARRAY_PATHS = {
     "gndvi": "output/gndvi_array.npy",
     "msavi": "output/msavi_array.npy",
 }
+
+DEFAULT_PROPERTIES = [
+    "bdod", "cec", "cfvo", "clay", "nitrogen", "ocd", "ocs",
+    "phh2o", "sand", "silt", "soc", "wv0010", "wv0033", "wv1500"
+]
+DEFAULT_DEPTHS = [
+    "0-5cm", "0-30cm", "5-15cm", "15-30cm", "30-60cm", "60-100cm", "100-200cm"
+]
+DEFAULT_VALUES = ["Q0.5", "Q0.05", "Q0.95", "mean", "uncertainty"]
+
+SOILGRIDS_API_URL = "https://rest.isric.org/soilgrids/v2.0/properties/query"
 
 
 @router.post("/analyze/{index_name}/", response_model=AnalysisResponse)
@@ -94,6 +109,50 @@ async def get_index_value(request: IndexRequest):
         "index_type": index_type.upper(),
         "index_value": index_value
     }
+
+@router.get("/soil-data/", response_model=SoilResponse)
+async def get_soil_data(
+    lon: float,
+    lat: float,
+    properties: list[str] = Query(DEFAULT_PROPERTIES),
+    depths: list[str] = Query(DEFAULT_DEPTHS),
+    values: list[str] = Query(DEFAULT_VALUES)
+):
+    """
+    SoilGrids API
+    """
+    params = [
+        ("lon", lon),
+        ("lat", lat),
+    ]
+
+    params += [("property", prop) for prop in properties]
+    params += [("depth", depth) for depth in depths]
+    params += [("value", val) for val in values]
+
+    try:
+        timeout = Timeout(30.0)  # Increase timeout to 30 seconds
+        async with httpx.AsyncClient(timeout=timeout) as client:
+            response = await client.get(SOILGRIDS_API_URL, params=params)
+            response.raise_for_status()
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(
+            status_code=e.response.status_code,
+            detail=f"Error fetching soil data: {e.response.text}"
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Unexpected error: {str(e)}"
+        )
+
+    try:
+        data = response.json()
+    except Exception:
+        raise HTTPException(
+            status_code=500, detail="Failed to parse JSON response from SoilGrids API"
+        )
+
+    return {"message": "Soil data fetched successfully", "data": data}
 
 @router.get("/get-map/")
 async def get_map(index_type: str):
