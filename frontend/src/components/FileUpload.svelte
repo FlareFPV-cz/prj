@@ -1,6 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import L from "leaflet";
+  import { fetchIndexValue, validateToken } from '../utils/api.js';
+
 
   let file;
   let analysisMethod = "ndvi"; // Default method
@@ -8,21 +10,6 @@
   let insights = null;
 
   let map, imageLayer;
-
-  // Function to fetch index value
-  async function fetchIndexValue(x, y, indexType) {
-      const response = await fetch("/get-index-value/", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ x, y, index_type: indexType }),
-      });
-      if (response.ok) {
-          const data = await response.json();
-          alert(`Coordinates: (${data.x}, ${data.y})\n${data.index_type}: ${data.index_value}`);
-      } else {
-          alert("Error retrieving index value.");
-      }
-  }
 
   onMount(() => {
       // Initialize map
@@ -49,6 +36,11 @@
       alert("Please select a file to upload.");
       return;
     }
+    
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      throw new Error("You are not authenticated. Please log in.");
+    }
 
     const formData = new FormData();
     formData.append('file', file.files[0]);
@@ -56,6 +48,9 @@
     const response = await fetch(`http://localhost:8000/analyze/${analysisMethod}/`, {
       method: 'POST',
       body: formData,
+      headers: {
+        Authorization: `Bearer ${token}`, // Add the token to the Authorization header
+      }
     });
 
     if (!response.ok) {

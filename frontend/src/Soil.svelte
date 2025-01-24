@@ -1,55 +1,72 @@
 <script>
-    import { onMount } from "svelte";
-    import L from "leaflet";
-    import "leaflet/dist/leaflet.css";
+  import { onMount } from "svelte";
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
 
-    let map;
-    let lon = 15.5, lat = 49.75; // Default coordinates
-    let soilData = null;
-    let loading = true;
-    let errorMessage = null;
+  let map;
+  let lon = 15.5, lat = 49.75; // Default coordinates
+  let soilData = null;
+  let loading = true;
+  let errorMessage = null;
 
-    async function fetchSoilData() {
+  async function fetchSoilData() {
       loading = true;
       errorMessage = null;
 
-      try {
-        const response = await fetch(
-          `http://localhost:8000/soil-data/?lon=${lon}&lat=${lat}`
-        );
-        if (response.ok) {
-          const data = await response.json();
-          soilData = data.data; // Update soil data
-        } else {
-          throw new Error("Failed to fetch soil data. Please check the server.");
-        }
-      } catch (error) {
-        errorMessage = error.message;
-      } finally {
-        loading = false;
-      }
-    }
+      // Retrieve token from localStorage
+      const token = localStorage.getItem("access_token");
 
-    function toggleContent(event) {
+      if (!token) {
+          errorMessage = "You are not authenticated. Please log in.";
+          loading = false;
+          return;
+      }
+
+      try {
+          const response = await fetch(
+              `http://localhost:8000/soil-data/?lon=${lon}&lat=${lat}`,
+              {
+                  headers: {
+                      Authorization: `Bearer ${token}`, // Add the token to the Authorization header
+                  },
+              }
+          );
+
+          if (response.ok) {
+              const data = await response.json();
+              soilData = data.data; // Update soil data
+          } else if (response.status === 401) {
+              throw new Error("Unauthorized. Please log in again.");
+          } else {
+              throw new Error("Failed to fetch soil data. Please check the server.");
+          }
+      } catch (error) {
+          errorMessage = error.message;
+      } finally {
+          loading = false;
+      }
+  }
+
+  function toggleContent(event) {
       const button = event.currentTarget;
       const content = button.nextElementSibling;
 
       button.classList.toggle("active");
 
       if (content.style.display === "block") {
-        content.style.display = "none";
+          content.style.display = "none";
       } else {
-        content.style.display = "block";
+          content.style.display = "block";
       }
-    }
+  }
 
-    onMount(() => {
+  onMount(() => {
       // Initialize Leaflet map
       map = L.map("map").setView([lat, lon], 8);
 
       // Add OpenStreetMap tiles
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '© OpenStreetMap contributors',
+          attribution: '© OpenStreetMap contributors',
       }).addTo(map);
 
       // Add marker
@@ -57,15 +74,16 @@
 
       // Handle map click
       map.on("click", async (e) => {
-        lon = e.latlng.lng;
-        lat = e.latlng.lat;
-        marker.setLatLng([lat, lon]).openPopup();
-        await fetchSoilData();
+          lon = e.latlng.lng;
+          lat = e.latlng.lat;
+          marker.setLatLng([lat, lon]).openPopup();
+          await fetchSoilData();
       });
 
       fetchSoilData();
-    });
+  });
 </script>
+
 
 <head>
     <link rel="stylesheet" href="../css/soil.css">

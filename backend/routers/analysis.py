@@ -3,6 +3,7 @@ from PIL import Image
 # from typing import Callable
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
+from models.user import User
 from dependencies.auth import get_current_active_user
 from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends, Query
 import httpx
@@ -60,7 +61,8 @@ SOILGRIDS_API_URL = "https://rest.isric.org/soilgrids/v2.0/properties/query"
 
 
 @router.post("/analyze/{index_name}/", response_model=AnalysisResponse)
-async def dynamic_analysis(file: UploadFile = File(...), index_name: str = Path(...)):
+async def dynamic_analysis(file: UploadFile = File(...), index_name: str = Path(...),
+                               current_user: User = Depends(get_current_active_user)):
     if index_name not in INDEX_CALCULATIONS:
         raise HTTPException(
             status_code=400,
@@ -72,7 +74,8 @@ async def dynamic_analysis(file: UploadFile = File(...), index_name: str = Path(
     return await perform_analysis(file, index_name, calculation_function)
 
 @router.post("/get-index-value/", response_model=IndexValueResponse)
-async def get_index_value(request: IndexRequest):
+async def get_index_value(request: IndexRequest,
+                          current_user: User = Depends(get_current_active_user)):
     x = request.x
     y = request.y
     index_type = request.index_type.lower()
@@ -116,7 +119,8 @@ async def get_soil_data(
     lat: float,
     properties: list[str] = Query(DEFAULT_PROPERTIES),
     depths: list[str] = Query(DEFAULT_DEPTHS),
-    values: list[str] = Query(DEFAULT_VALUES)
+    values: list[str] = Query(DEFAULT_VALUES),
+    current_user: User = Depends(get_current_active_user) 
 ):
     """
     SoilGrids API
@@ -155,7 +159,8 @@ async def get_soil_data(
     return {"message": "Soil data fetched successfully", "data": data}
 
 @router.get("/get-map/")
-async def get_map(index_type: str):
+async def get_map(index_type: str,
+                  current_user: User = Depends(get_current_active_user)):
     file_path = "output/"+index_type+"_result.png"
     return FileResponse(file_path, media_type="image/png")
 
