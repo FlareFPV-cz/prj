@@ -1,0 +1,3 @@
+2025-01-25 20:07:34,247 - INFO - Current working directory: /Users/kozeluh/Desktop/flarefpv/prj
+2025-01-25 20:07:34,260 - INFO - Scaler saved at backend/ml/scaler.pkl
+2025-01-25 20:07:40,443 - INFO - Best model saved at backend/ml/soil_model.pkl

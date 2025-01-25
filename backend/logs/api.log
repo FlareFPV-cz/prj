@@ -458,3 +458,48 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-25 17:44:39,820 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
 2025-01-25 17:44:39,969 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrb2tvZGFrIiwiZXhwIjoxNzM3ODI3MDc5fQ.G2VCGo5CJOHaEj869Ks0jZwxvvZYjFaAefP9YsChPTY
 2025-01-25 17:44:39,970 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-25 20:14:00,822 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0027s
+2025-01-25 20:14:00,939 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0172s
+2025-01-25 20:22:51,183 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:22:51,257 - ERROR - Prediction error: X has 1 features, but StandardScaler is expecting 8 features as input.
+2025-01-25 20:22:51,257 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 18.6265s
+2025-01-25 20:25:37,287 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:25:37,366 - ERROR - Prediction error: X has 14 features, but StandardScaler is expecting 8 features as input.
+2025-01-25 20:25:37,366 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 18.3860s
+2025-01-25 20:27:12,773 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:27:12,820 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 11.0229s
+2025-01-25 20:29:38,449 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:29:38,502 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 12.2301s
+2025-01-25 20:29:54,228 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:29:54,275 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 10.1998s
+2025-01-25 20:30:58,836 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:30:58,881 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 7.9584s
+2025-01-25 20:33:35,974 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=44.09367&lat=49.120705&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:33:36,028 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 11.8360s
+2025-01-25 20:41:09,475 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0016s
+2025-01-25 20:41:09,591 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0142s
+2025-01-25 20:44:04,240 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0043s
+2025-01-25 20:44:04,302 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0100s
+2025-01-25 20:44:58,750 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0047s
+2025-01-25 20:44:58,816 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0171s
+2025-01-25 20:45:53,663 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0019s
+2025-01-25 20:46:59,440 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0013s
+2025-01-25 20:46:59,498 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0130s
+2025-01-25 20:50:01,938 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0022s
+2025-01-25 20:50:01,985 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:50:01,989 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0114s
+2025-01-25 20:50:08,183 - INFO - Client: 127.0.0.1 | Method: GET | Path: /redocs | Status: 404 | Duration: 0.0009s
+2025-01-25 20:50:08,204 - INFO - Client: 127.0.0.1 | Method: GET | Path: /favicon.ico | Status: 404 | Duration: 0.0007s
+2025-01-25 20:50:12,059 - INFO - Client: 127.0.0.1 | Method: GET | Path: /redoc | Status: 200 | Duration: 0.0004s
+2025-01-25 20:50:12,296 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0006s
+2025-01-25 20:54:13,875 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0016s
+2025-01-25 20:54:13,915 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:54:13,918 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0073s
+2025-01-25 20:54:40,975 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0011s
+2025-01-25 20:54:41,027 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:54:41,029 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0101s
+2025-01-25 20:55:02,266 - INFO - Root endpoint accessed.
+2025-01-25 20:55:02,267 - INFO - Client: 127.0.0.1 | Method: GET | Path: / | Status: 200 | Duration: 0.0015s

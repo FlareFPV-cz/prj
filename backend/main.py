@@ -33,7 +33,20 @@ from models.user import SignupRequest
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI()
+app = FastAPI(
+    title="PRJ API",
+    description="An API for soil analysis, vegetation indices, and geospatial data processing.",
+    version="0.0.1",
+    contact={
+        "name": "Jan Kozeluh",
+        "url": "https://www.linkedin.com/in/jan-kozeluh/",
+        "email": "jankozeluh.job@seznam.cz",
+    },
+    license_info={
+        "name": "MIT License",
+        "url": "https://opensource.org/licenses/MIT",
+    },
+)
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
@@ -87,7 +100,7 @@ def decrypt_password(encrypted_password: str) -> str:
         logger.error(f"Decryption failed: {str(e)}")
         raise HTTPException(status_code=400, detail="Invalid encryption")
 
-@app.post("/signup")
+@app.post("/signup", tags=["Auth"])
 def signup(user: SignupRequest, db=Depends(get_db)):
     decrypted_password = decrypt_password(user.password)  # Decrypt before hashing
     hashed_password = get_password_hash(decrypted_password)  # Now hash it
@@ -107,7 +120,7 @@ def signup(user: SignupRequest, db=Depends(get_db)):
         db.close()
     return {"message": "User created successfully"}
 
-@app.post("/login")
+@app.post("/login", tags=["Auth"])
 def login(form_data: OAuth2PasswordRequestForm = Depends()):
     user = authenticate_user(form_data.username, form_data.password)
     if not user:
@@ -126,7 +139,7 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
     )
     return response
 
-@app.post("/logout")
+@app.post("/logout", tags=["Auth"])
 def logout(request: Request, response: Response, db=Depends(get_db)):
     token = request.cookies.get("access_token")
     logger.info(f"Logout request received. Token: {token}")
@@ -150,7 +163,7 @@ def logout(request: Request, response: Response, db=Depends(get_db)):
     
     return {"message": "Logged out successfully"}
 
-@app.post("/validate-token")
+@app.post("/validate-token", tags=["Auth"])
 def validate_token(request: Request):
     token = request.cookies.get("access_token")
     logger.info(f"Validating token: {token}")
@@ -164,14 +177,21 @@ def validate_token(request: Request):
     except JWTError:
         raise HTTPException(status_code=401, detail="Invalid token")
 
-@app.get("/public-key")
+@app.get("/public-key", tags=["Auth"])
 def get_public_key():
     return {"public_key": PUBLIC_KEY}
 
-app.include_router(analysis.router)
-app.include_router(model.router)
+app.include_router(
+    analysis.router,
+    tags=["Soil Analysis"]
+)
 
-@app.get("/")
+app.include_router(
+    model.router,
+    tags=["ML Models"]
+)
+
+@app.get("/", tags=["Test"])
 def read_root():
     logger.info("Root endpoint accessed.")
     return {"message": "Analysis App is running"}
