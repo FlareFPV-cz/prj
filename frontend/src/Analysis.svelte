@@ -1,27 +1,14 @@
-<!-- <script>
-  import FileUpload from './components/FileUpload.svelte';
-
-  // Check authentication on mount
-
-</script>
-
-<main>
-  <h1>Analysis</h1>
-  <FileUpload/>
-</main>
-
-<body>
-</body> -->
-
 <script>
-  // import { fetchIndexValue, validateToken } from './utils/api.js';
+  import { onMount } from "svelte";
   import FileUpload from './components/FileUpload.svelte';
   import IndexValue from './components/IndexValue.svelte';
   import Map from './components/Map.svelte';
-  if (!localStorage.getItem("access_token")) {
-    alert("You are not authenticated. Redirecting to login.");
-    window.location.href = "#/login"; // Redirect to login page
-  }
+  import { checkAuth } from "./utils/auth";
+
+  onMount(async () => {
+      const auth = await checkAuth();
+      if (!auth) return; // Stop execution if not authenticated
+  });
 </script>
 
 <main>

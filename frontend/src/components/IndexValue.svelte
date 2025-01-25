@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { checkAuth } from "../utils/auth";
 
   let x = 0;
   let y = 0;
@@ -11,20 +12,16 @@
     error = null;
     result = null;
 
-    // Retrieve token from localStorage
-    const token = localStorage.getItem("access_token");
+    const auth = await checkAuth();
+    if (!auth) return; // Stop execution if not authenticated
 
-    if (!token) {
-      error = "You are not authenticated. Please log in.";
-      return;
-    }
 
     try {
       const response = await fetch("http://localhost:8000/get-index-value/", {
         method: "POST",
+        credentials: "include",
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Add the token
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ x, y, index_type: indexType }),
       });

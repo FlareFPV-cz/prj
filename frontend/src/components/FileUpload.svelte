@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import L from "leaflet";
   import { fetchIndexValue, validateToken } from '../utils/api.js';
-
+  import { checkAuth } from "../utils/auth";
 
   let file;
   let analysisMethod = "ndvi"; // Default method
@@ -11,8 +11,11 @@
 
   let map, imageLayer;
 
-  onMount(() => {
-      // Initialize map
+  onMount(async () => {
+    const auth = await checkAuth();
+    if (!auth) return; // Stop execution if not authenticated
+
+    // Initialize map
       map = L.map("map", {
           crs: L.CRS.Simple,
           minZoom: -1,
@@ -37,10 +40,6 @@
       return;
     }
     
-    const token = localStorage.getItem("access_token");
-    if (!token) {
-      throw new Error("You are not authenticated. Please log in.");
-    }
 
     const formData = new FormData();
     formData.append('file', file.files[0]);
@@ -48,9 +47,7 @@
     const response = await fetch(`http://localhost:8000/analyze/${analysisMethod}/`, {
       method: 'POST',
       body: formData,
-      headers: {
-        Authorization: `Bearer ${token}`, // Add the token to the Authorization header
-      }
+      credentials: "include"
     });
 
     if (!response.ok) {

@@ -2,3 +2,13 @@ python-multipart
 fastapi
 pandas
 httpx
+scikit-learn
+tensorflow
+keras
+matplotlib
+seaborn
+optuna
+torch 
+torchvision 
+torchaudio
+shap

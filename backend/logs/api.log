@@ -1,0 +1,410 @@
+2025-01-25 12:22:47,271 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0106s
+2025-01-25 12:24:32,471 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:24:32,728 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2622s
+2025-01-25 12:26:09,164 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2466s
+2025-01-25 12:30:17,812 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:30:18,067 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2611s
+2025-01-25 12:30:57,935 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0019s
+2025-01-25 12:30:57,935 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 401 | Duration: 0.0008s
+2025-01-25 12:31:01,166 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 12:31:01,168 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 401 | Duration: 0.0006s
+2025-01-25 12:37:03,406 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.0025s
+2025-01-25 12:37:12,830 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.0032s
+2025-01-25 12:40:43,479 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:40:43,737 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2619s
+2025-01-25 12:43:09,853 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 12:43:17,237 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 12:43:23,512 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:43:23,775 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2677s
+2025-01-25 12:43:23,835 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 12:43:59,671 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2442s
+2025-01-25 12:43:59,819 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0015s
+2025-01-25 12:47:01,820 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0092s
+2025-01-25 12:47:10,810 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2446s
+2025-01-25 12:47:10,966 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0019s
+2025-01-25 12:47:26,804 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0114s
+2025-01-25 12:47:29,442 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0068s
+2025-01-25 12:47:34,006 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2537s
+2025-01-25 12:47:34,163 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0054s
+2025-01-25 12:50:13,878 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 12:50:21,144 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2457s
+2025-01-25 12:50:55,510 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2479s
+2025-01-25 12:52:45,515 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2450s
+2025-01-25 12:53:38,826 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 12:54:03,986 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0032s
+2025-01-25 12:54:23,116 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2468s
+2025-01-25 12:55:19,935 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:55:20,194 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2633s
+2025-01-25 12:56:17,188 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:56:17,446 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2616s
+2025-01-25 12:56:17,451 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 12:56:25,001 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0088s
+2025-01-25 12:56:30,471 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2445s
+2025-01-25 12:56:30,477 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 12:57:22,995 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0024s
+2025-01-25 12:57:23,794 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0015s
+2025-01-25 12:57:24,449 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0006s
+2025-01-25 12:57:28,730 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2463s
+2025-01-25 12:57:28,735 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 12:59:11,161 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 12:59:16,804 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 12:59:17,066 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2662s
+2025-01-25 12:59:17,070 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:00:12,525 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2481s
+2025-01-25 13:00:12,530 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0003s
+2025-01-25 13:00:22,238 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 400 | Duration: 0.0038s
+2025-01-25 13:00:27,230 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2449s
+2025-01-25 13:00:27,234 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:01:23,406 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2413s
+2025-01-25 13:01:23,412 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:01:23,490 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0006s
+2025-01-25 13:01:40,478 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2451s
+2025-01-25 13:01:40,483 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:01:40,546 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 13:03:51,624 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 13:03:58,927 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2470s
+2025-01-25 13:03:58,934 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:05:25,030 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 13:05:25,276 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2487s
+2025-01-25 13:05:25,283 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 13:05:31,942 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0014s
+2025-01-25 13:05:38,772 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2458s
+2025-01-25 13:05:38,779 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 13:06:11,504 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2465s
+2025-01-25 13:06:11,511 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 13:15:00,983 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0028s
+2025-01-25 13:15:11,194 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2473s
+2025-01-25 13:15:11,200 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0003s
+2025-01-25 13:16:02,479 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 13:16:02,735 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2605s
+2025-01-25 13:16:02,740 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0004s
+2025-01-25 13:28:42,813 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0018s
+2025-01-25 13:28:53,035 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2475s
+2025-01-25 13:28:53,041 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 13:30:18,197 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0013s
+2025-01-25 13:31:46,590 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0174s
+2025-01-25 13:31:54,339 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2462s
+2025-01-25 13:31:54,349 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-01-25 13:32:37,216 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 13:32:37,471 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2595s
+2025-01-25 13:32:37,477 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 13:32:39,983 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0152s
+2025-01-25 13:32:55,514 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0016s
+2025-01-25 13:33:08,415 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 13:33:13,599 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2480s
+2025-01-25 13:33:13,605 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 13:33:16,609 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0066s
+2025-01-25 15:50:03,562 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 15:50:09,848 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0026s
+2025-01-25 15:51:37,868 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 15:51:42,909 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 15:51:43,170 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2702s
+2025-01-25 15:51:43,174 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 15:55:09,190 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0118s
+2025-01-25 15:55:13,871 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2455s
+2025-01-25 15:55:13,876 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 15:55:46,152 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0018s
+2025-01-25 15:55:51,013 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2432s
+2025-01-25 15:55:51,019 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:00:08,739 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2533s
+2025-01-25 16:00:08,744 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 16:01:21,650 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 16:01:21,907 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2608s
+2025-01-25 16:01:21,912 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:03:52,339 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:05:52,342 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0005s
+2025-01-25 16:06:05,807 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2444s
+2025-01-25 16:06:05,814 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 16:06:13,413 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 401 | Duration: 0.0102s
+2025-01-25 16:07:17,057 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 16:07:20,506 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:09:11,211 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-01-25 16:09:13,647 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0005s
+2025-01-25 16:09:22,697 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0252s
+2025-01-25 16:09:25,123 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0012s
+2025-01-25 16:10:45,675 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-01-25 16:10:46,739 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0024s
+2025-01-25 16:10:50,718 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-01-25 16:11:58,140 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 16:12:02,289 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0022s
+2025-01-25 16:12:56,513 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-01-25 16:12:58,645 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0016s
+2025-01-25 16:13:30,714 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:13:31,760 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0024s
+2025-01-25 16:16:08,167 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0023s
+2025-01-25 16:16:11,292 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0018s
+2025-01-25 16:16:50,739 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:16:56,163 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 401 | Duration: 0.0019s
+2025-01-25 16:17:35,759 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 16:17:48,319 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-01-25 16:17:49,331 - INFO - Client: 127.0.0.1 | Method: GET | Path: /logout | Status: 401 | Duration: 0.0034s
+2025-01-25 16:18:35,046 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:18:46,872 - INFO - Client: 127.0.0.1 | Method: GET | Path: /logout | Status: 200 | Duration: 0.0038s
+2025-01-25 16:19:10,690 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 405 | Duration: 0.0003s
+2025-01-25 16:19:24,793 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 16:19:29,435 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 16:19:29,699 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2684s
+2025-01-25 16:19:29,707 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 405 | Duration: 0.0002s
+2025-01-25 16:19:48,561 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0040s
+2025-01-25 16:19:58,012 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-25 16:19:59,190 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0041s
+2025-01-25 16:20:04,639 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2447s
+2025-01-25 16:20:04,645 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:20:16,124 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2440s
+2025-01-25 16:20:16,132 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 16:20:17,545 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0087s
+2025-01-25 16:21:01,516 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0056s
+2025-01-25 16:21:07,312 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2443s
+2025-01-25 16:21:07,318 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 16:21:07,495 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0031s
+2025-01-25 16:21:12,211 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0029s
+2025-01-25 16:21:15,621 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0106s
+2025-01-25 16:21:21,388 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0030s
+2025-01-25 16:22:05,009 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0045s
+2025-01-25 16:22:31,425 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 201 | Duration: 0.2436s
+2025-01-25 16:22:43,095 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 400 | Duration: 0.0029s
+2025-01-25 16:23:00,128 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2542s
+2025-01-25 16:23:00,133 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:23:00,296 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0038s
+2025-01-25 16:23:11,287 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-01-25 16:23:16,552 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0090s
+2025-01-25 16:23:17,204 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0079s
+2025-01-25 16:28:00,271 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 405 | Duration: 0.0005s
+2025-01-25 16:28:02,406 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-25 16:28:06,329 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 405 | Duration: 0.0010s
+2025-01-25 16:28:08,449 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:28:22,898 - INFO - Client: 127.0.0.1 | Method: GET | Path: /validate-token | Status: 405 | Duration: 0.0006s
+2025-01-25 16:28:25,020 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:28:41,936 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:29:00,743 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:29:00,823 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 18.8757s
+2025-01-25 16:29:12,458 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0040s
+2025-01-25 16:29:13,909 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0052s
+2025-01-25 16:29:15,473 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 16:29:16,950 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 16:29:17,080 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0015s
+2025-01-25 16:31:01,523 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 16:31:04,701 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0089s
+2025-01-25 16:31:09,708 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2465s
+2025-01-25 16:31:09,713 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-25 16:31:09,819 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:35:17,993 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0005s
+2025-01-25 16:35:23,405 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2487s
+2025-01-25 16:35:23,412 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:35:23,833 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-01-25 16:35:25,737 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:35:25,742 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-25 16:35:25,743 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0040s
+2025-01-25 16:35:29,892 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 0.0606s
+2025-01-25 16:35:31,212 - INFO - Client: 127.0.0.1 | Method: GET | Path: /output/ndvi_result.png | Status: 200 | Duration: 0.0078s
+2025-01-25 16:36:17,812 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-01-25 16:36:25,917 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:36:25,918 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0031s
+2025-01-25 16:36:28,312 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:36:28,313 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0019s
+2025-01-25 16:36:31,023 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-25 16:36:31,758 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-01-25 16:36:33,729 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0024s
+2025-01-25 16:36:33,730 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:36:34,387 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-01-25 16:36:35,357 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-25 16:36:37,936 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-01-25 16:36:37,939 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-01-25 16:36:48,996 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:36:49,073 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.7040s
+2025-01-25 16:39:20,492 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-01-25 16:39:28,032 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:39:28,033 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-01-25 16:41:08,385 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-01-25 16:41:11,422 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-01-25 16:41:13,214 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:41:13,978 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-01-25 16:41:13,980 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-01-25 16:41:13,980 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0029s
+2025-01-25 16:41:19,562 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 0.1479s
+2025-01-25 16:41:20,291 - INFO - Client: 127.0.0.1 | Method: GET | Path: /output/ndvi_result.png | Status: 200 | Duration: 0.0011s
+2025-01-25 16:41:27,141 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-25 16:41:27,152 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 400 | Duration: 0.0050s
+2025-01-25 16:41:29,999 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-25 16:41:30,009 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0053s
+2025-01-25 16:41:53,157 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:41:53,895 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0024s
+2025-01-25 16:41:53,895 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-01-25 16:41:53,896 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0034s
+2025-01-25 16:41:55,058 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:41:57,029 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0083s
+2025-01-25 16:41:58,193 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-01-25 16:41:59,417 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0047s
+2025-01-25 16:42:11,254 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:42:11,337 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 18.1684s
+2025-01-25 16:42:11,344 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 401 | Duration: 0.0032s
+2025-01-25 16:42:11,347 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 401 | Duration: 0.0013s
+2025-01-25 16:42:27,330 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 16:42:28,032 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:28,183 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 16:42:28,907 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:29,284 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 16:42:29,467 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 16:42:29,636 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 16:42:29,822 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-25 16:42:29,989 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 16:42:30,184 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0013s
+2025-01-25 16:42:30,859 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-25 16:42:31,409 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 16:42:31,761 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 16:42:31,905 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:32,073 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-25 16:42:32,257 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:32,450 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:32,629 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:32,800 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-25 16:42:32,976 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-25 16:42:33,176 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-25 16:42:33,388 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:33,554 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:33,727 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 16:42:33,901 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 16:42:34,063 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-25 16:42:34,268 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0011s
+2025-01-25 16:42:34,437 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0013s
+2025-01-25 16:42:42,419 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2465s
+2025-01-25 16:42:42,424 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:42:42,485 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:42:44,013 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:42:45,942 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-01-25 16:42:45,943 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-01-25 16:42:45,943 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0031s
+2025-01-25 16:42:46,447 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:42:47,034 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:42:47,035 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-01-25 16:42:47,035 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:42:47,471 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:42:48,456 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-01-25 16:42:48,457 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0032s
+2025-01-25 16:42:48,459 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0024s
+2025-01-25 16:42:48,919 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0016s
+2025-01-25 16:42:51,747 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-25 16:42:52,264 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0025s
+2025-01-25 16:42:52,265 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-01-25 16:42:52,266 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0032s
+2025-01-25 16:42:52,873 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-25 16:42:53,464 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-01-25 16:42:53,466 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-01-25 16:42:53,466 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0031s
+2025-01-25 16:42:53,949 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:42:54,393 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0033s
+2025-01-25 16:42:54,394 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0035s
+2025-01-25 16:42:54,395 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0029s
+2025-01-25 16:42:54,828 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-25 16:42:55,333 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:42:55,335 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0029s
+2025-01-25 16:42:55,335 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0029s
+2025-01-25 16:42:55,840 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-25 16:43:09,337 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-25 16:43:09,419 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:43:09,496 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 25.4731s
+2025-01-25 16:43:14,883 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:43:14,963 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 27.4813s
+2025-01-25 16:43:20,168 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:43:20,238 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 26.2797s
+2025-01-25 16:43:31,405 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-25 16:43:32,599 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0051s
+2025-01-25 16:43:32,600 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-01-25 16:43:32,601 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-25 16:43:32,609 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0014s
+2025-01-25 16:43:33,125 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-25 16:43:33,543 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-01-25 16:43:33,544 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0025s
+2025-01-25 16:43:33,545 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-01-25 16:43:33,552 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0025s
+2025-01-25 16:43:34,559 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-01-25 16:43:39,875 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 0.0081s
+2025-01-25 16:43:47,511 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 16:43:47,589 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 14.4484s
+2025-01-25 16:52:01,965 - INFO - Logout request received. Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyMzM2Mn0.-6kJYkJ-NazN9owU0cxG0qlFBNJra-sr1UGJ9Mhlr_U
+2025-01-25 16:52:01,967 - INFO - Token successfully invalidated and cookie cleared.
+2025-01-25 16:52:01,968 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0061s
+2025-01-25 16:52:06,981 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 16:52:07,245 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyMzkyN30.qcf4YDW3P6vN3z69DuFxTQLmsA7TzbT9WoO5z_kELi8
+2025-01-25 16:52:07,246 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2684s
+2025-01-25 16:52:07,250 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyMzkyN30.qcf4YDW3P6vN3z69DuFxTQLmsA7TzbT9WoO5z_kELi8
+2025-01-25 16:52:07,250 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 16:52:07,367 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyMzkyN30.qcf4YDW3P6vN3z69DuFxTQLmsA7TzbT9WoO5z_kELi8
+2025-01-25 16:52:07,368 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-25 16:52:09,882 - INFO - Logout request received. Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyMzkyN30.qcf4YDW3P6vN3z69DuFxTQLmsA7TzbT9WoO5z_kELi8
+2025-01-25 16:52:09,885 - INFO - Token successfully invalidated and cookie cleared.
+2025-01-25 16:52:09,885 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0052s
+2025-01-25 16:52:23,672 - INFO - User jjjjjkkk signed up successfully.
+2025-01-25 16:52:23,673 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 201 | Duration: 0.2468s
+2025-01-25 16:53:31,697 - INFO - Validating token: None
+2025-01-25 16:53:31,697 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0006s

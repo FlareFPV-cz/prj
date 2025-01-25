@@ -4,7 +4,7 @@ from PIL import Image
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from models.user import User
-from dependencies.auth import get_current_active_user
+from utils.auth import get_current_active_user
 from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends, Query
 import httpx
 from httpx import Timeout

@@ -1,27 +1,20 @@
 <script>
   import { onMount } from "svelte";
   import L from "leaflet";
+  import { checkAuth } from "../utils/auth";
 
   let map;
   let indexValue = null;
   let bounds = null;
   let selectedIndexType = "ndvi";
 
-  // Retrieve token from localStorage
-  const token = localStorage.getItem("access_token");
-
-  if (!token) {
-    alert("You are not authenticated. Redirecting to login.");
-    window.location.href = "#/login"; // Redirect to login page
-  }
-
   const fetchIndexValue = async (x, y) => {
     try {
       const response = await fetch("http://localhost:8000/get-index-value/", {
         method: "POST",
+        credentials: "include",
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Add the token
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ x, y, index_type: selectedIndexType }),
       });
@@ -73,7 +66,9 @@
     }
   };
 
-  onMount(() => {
+  onMount(async () => {
+    const auth = await checkAuth();
+    if (!auth) return; // Stop execution if not authenticated
     const img = new Image();
     img.src = `http://localhost:8000/get-map/?index_type=${selectedIndexType}`;
     img.onload = () => {

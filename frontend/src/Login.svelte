@@ -1,8 +1,6 @@
 <script>
     import { writable } from "svelte/store";
 
-    export let token = writable("");
-
     let username = "";
     let password = "";
     let email = "";
@@ -10,24 +8,29 @@
     let error = "";
     let isSignup = false;
 
+    let isAuthenticated = writable(false);
+
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
     async function login() {
         error = "";
         try {
-            const response = await fetch("http://127.0.0.1:8000/login", {
+            const response = await fetch(`${API_URL}/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                credentials: "include", //Required for secure cookies
                 body: new URLSearchParams({ username, password }),
             });
 
             if (!response.ok) {
                 const errorData = await response.json();
-                error = errorData.detail || "Login failed";
+                error = escapeHTML(errorData.detail) || "Login failed";
                 return;
             }
 
-            const data = await response.json();
-            token.set(data.access_token);
-            localStorage.setItem("access_token", data.access_token);
+            console.log("Login successful! Checking auth...");
+            await checkAuth();
+            
             window.location.href = "#/";
             location.reload();
         } catch (e) {
@@ -35,18 +38,51 @@
         }
     }
 
+    async function checkAuth() {
+        try {
+            const response = await fetch(`${API_URL}/validate-token`, {
+                method: "POST",
+                credentials: "include", 
+            });
+
+            if (!response.ok) {
+                console.error("User is not authenticated.");
+                return false;
+            }
+
+            const data = await response.json();
+            console.log("User is authenticated:", data);
+            return true;
+        } catch (e) {
+            console.error("Error checking authentication:", e);
+            return false;
+        }
+    }
+
+
     async function signup() {
         error = "";
+
+        if (password.length < 8 || !/\d/.test(password)) {
+            error = "Password must be at least 8 characters long and include a number.";
+            return;
+        }
+
         try {
-            const response = await fetch("http://127.0.0.1:8000/signup", {
+            const response = await fetch(`${API_URL}/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ username, password, email, full_name }),
+                body: JSON.stringify({ 
+                    username, 
+                    password, 
+                    email, 
+                    full_name 
+                }),
             });
 
             if (!response.ok) {
                 const errorData = await response.json();
-                error = errorData.detail || "Signup failed";
+                error = escapeHTML(errorData.detail) || "Signup failed";
                 return;
             }
 
@@ -61,6 +97,16 @@
     function toggleForm() {
         error = "";
         isSignup = !isSignup;
+    }
+
+    function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, match => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        }[match]));
     }
 </script>
 

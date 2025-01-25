@@ -2,9 +2,10 @@
   import { onMount } from "svelte";
   import L from "leaflet";
   import "leaflet/dist/leaflet.css";
+  import { checkAuth } from "./utils/auth";
 
   let map;
-  let lon = 15.5, lat = 49.75; // Default coordinates
+  let lon = 15.5, lat = 49.75;
   let soilData = null;
   let loading = true;
   let errorMessage = null;
@@ -13,32 +14,22 @@
       loading = true;
       errorMessage = null;
 
-      // Retrieve token from localStorage
-      const token = localStorage.getItem("access_token");
-
-      if (!token) {
-          errorMessage = "You are not authenticated. Please log in.";
-          loading = false;
-          return;
-      }
-
       try {
           const response = await fetch(
               `http://localhost:8000/soil-data/?lon=${lon}&lat=${lat}`,
               {
-                  headers: {
-                      Authorization: `Bearer ${token}`, // Add the token to the Authorization header
-                  },
+                  method: "GET",
+                  credentials: "include", // cookies
               }
           );
 
           if (response.ok) {
               const data = await response.json();
-              soilData = data.data; // Update soil data
+              soilData = data.data;
           } else if (response.status === 401) {
               throw new Error("Unauthorized. Please log in again.");
           } else {
-              throw new Error("Failed to fetch soil data. Please check the server.");
+              throw new Error("Failed to fetch soil data.");
           }
       } catch (error) {
           errorMessage = error.message;
@@ -50,29 +41,21 @@
   function toggleContent(event) {
       const button = event.currentTarget;
       const content = button.nextElementSibling;
-
       button.classList.toggle("active");
-
-      if (content.style.display === "block") {
-          content.style.display = "none";
-      } else {
-          content.style.display = "block";
-      }
+      content.style.display = content.style.display === "block" ? "none" : "block";
   }
 
-  onMount(() => {
-      // Initialize Leaflet map
-      map = L.map("map").setView([lat, lon], 8);
+  onMount(async () => {
+      const auth = await checkAuth();
+      if (!auth) return; // Stop execution if not authenticated
 
-      // Add OpenStreetMap tiles
+      map = L.map("map").setView([lat, lon], 8);
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: '© OpenStreetMap contributors',
       }).addTo(map);
 
-      // Add marker
       const marker = L.marker([lat, lon]).addTo(map).bindPopup("Selected Location");
 
-      // Handle map click
       map.on("click", async (e) => {
           lon = e.latlng.lng;
           lat = e.latlng.lat;
