@@ -408,3 +408,53 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-25 16:52:23,673 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 201 | Duration: 0.2468s
 2025-01-25 16:53:31,697 - INFO - Validating token: None
 2025-01-25 16:53:31,697 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0006s
+2025-01-25 17:24:40,257 - INFO - Validating token: None
+2025-01-25 17:24:40,257 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0013s
+2025-01-25 17:27:51,151 - INFO - Validating token: None
+2025-01-25 17:27:51,152 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 17:27:57,419 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 17:27:57,678 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyNjA3N30.Wj7e-xpIBWdvDg9hRmMt0LOpjadf6liOCX7DQjN2zr8
+2025-01-25 17:27:57,678 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2699s
+2025-01-25 17:27:57,683 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyNjA3N30.Wj7e-xpIBWdvDg9hRmMt0LOpjadf6liOCX7DQjN2zr8
+2025-01-25 17:27:57,684 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 17:27:57,730 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyNjA3N30.Wj7e-xpIBWdvDg9hRmMt0LOpjadf6liOCX7DQjN2zr8
+2025-01-25 17:27:57,730 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-25 17:27:59,255 - INFO - Logout request received. Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzgyNjA3N30.Wj7e-xpIBWdvDg9hRmMt0LOpjadf6liOCX7DQjN2zr8
+2025-01-25 17:27:59,260 - INFO - Token successfully invalidated and cookie cleared.
+2025-01-25 17:27:59,260 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0130s
+2025-01-25 17:28:20,820 - INFO - Validating token: None
+2025-01-25 17:28:20,822 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0012s
+2025-01-25 17:33:55,150 - INFO - Validating token: None
+2025-01-25 17:33:55,150 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0014s
+2025-01-25 17:34:22,876 - INFO - Client: 127.0.0.1 | Method: GET | Path: /public-key | Status: 200 | Duration: 0.0015s
+2025-01-25 17:34:22,894 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 400 | Duration: 0.0026s
+2025-01-25 17:37:38,058 - INFO - Received encrypted password: P7J+iOJ0ZvGNJcswZW52wJkQ55Jjfhu8FGePU6KkpXRZ6QcfjSmdcgrDe/p4Urbs9GIEUWexhpKIJZbkryH1ue7xardRS3RtVYYSjwPXlF+S/1WZtrC7rGv+HNG+h5EEkg1sB8P9icqrWN30hD+38Z0hE9spKcOPCBxiJVhqDaWglDtRRhqN6UUoUx4R66fCcdULPM5x74rUC7791XulgClz1CI7sVowUg+wLIH+Gbt7DcfMER5XoZceaNs+NxRk0MLDkBsYRF8EmKh8jZ8sud0WtfKrdTkXN0CwsGYtCIPZcMBVnoFVzSblDfxgOR2J2oS+k/PKlgf6mrfW8GF0vw==
+2025-01-25 17:37:38,058 - ERROR - Decryption failed: non-hexadecimal number found in fromhex() arg at position 0
+2025-01-25 17:37:38,059 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 400 | Duration: 0.0035s
+2025-01-25 17:39:53,382 - INFO - Received encrypted password: AlKyw/WNMoY9reL2pgQTbeeEbPc3QsfsVY05SYBsOFK2+AJ6/pJycun33IU2YrGFDYuSkjFEIttRZZ+X8mo33Vo5N+oH3O7Tj7nEFIvfMKGrzEPlYEO3SKqbcHP0r+8A6Qwt9Rl7nTrxtvzKKvXF7nEJ0URM6+L+RkFtAPyzZDG/BOImYF9Wkr5ml+8EjNWIadKP6YxRYeYDioBSvUG3EE/2+O1EWP4EhyTHwtaMzFbE3N3jxNPwHDIGRm/q6UbnuDygJy9NWGulv1BeaZxMP28stixa42jBcyfNYNyj8FVhrPa6BSqX5JhLwfKJ+d0emQj9cXWzfWHCkeHgbnzkew==
+2025-01-25 17:39:53,383 - ERROR - Decryption failed: non-hexadecimal number found in fromhex() arg at position 1
+2025-01-25 17:39:53,383 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 400 | Duration: 0.0030s
+2025-01-25 17:43:43,442 - INFO - Received encrypted password: HwNe0Muuz42Xphm5qP1qI9O153JwYXmz+KlgH6cvIlWzWUMNtD/OefCNXM2j9DhbR2Ld/MlW5TbHdfWfl+cyk3NVBELLEWtGUI666DKG4ydnvWcWUpLWh6KUXVUtdftFRMRT0Q4ZtJSJjwlgBfiymrIoQCFGP2JIbDZDsDQ/hx8oPGH47ec12/QfaUufgtkygWLI52Eo25q0MehCJhFnaMIHcSFsnzcWuN2NoOA7ZS5TK+IERsPQBVxgaH3MA4Q8LlsRaSDrFNORNeRA24XjQ4PPhdohm667dQl+JMtQOGW+k5YY9OxJHmxWVdqzgJkoPTV35D8zqc78ETjp1bu/jg==
+2025-01-25 17:43:43,470 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-25 17:43:43,717 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 200 | Duration: 0.2774s
+2025-01-25 17:44:02,022 - INFO - Validating token: None
+2025-01-25 17:44:02,023 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-25 17:44:31,649 - INFO - Client: 127.0.0.1 | Method: GET | Path: /public-key | Status: 200 | Duration: 0.0011s
+2025-01-25 17:44:31,667 - INFO - Received encrypted password: OoJF/3qUiCQJSwBzEq35Q1pe3d6u52VfUD3sFqy0HfVZvBnWyd92hNWP33dtq3BUsj0HV0hWxCmbsxSSfKVWStuOUfuiIPJsYOS7IfMSvwA1cqMaoAtl6AyO9659CBx+2HzxlKEEuDtwv7htigD/I2QrOc92F9gi8LkPcF/xuMsq9P/M8akBbHweH3xrzq3P83zKdGSgvvrZW7qyVZW0iPNeGaThWrbBS8kkkXdtKnQHS4TgQokUGNRzQudM4DS7bhB2dm81ehaW0fKyaLso4fRgOjakPa/h/0l/C2zYTDWhFGaJysf3rM8e93GgiN7sNpRju1iKo8Ya2cl8IwEx3g==
+2025-01-25 17:44:31,918 - INFO - Client: 127.0.0.1 | Method: POST | Path: /signup | Status: 200 | Duration: 0.2521s
+2025-01-25 17:44:39,815 - INFO - Generated access token for user kokodak: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrb2tvZGFrIiwiZXhwIjoxNzM3ODI3MDc5fQ.G2VCGo5CJOHaEj869Ks0jZwxvvZYjFaAefP9YsChPTY
+2025-01-25 17:44:39,816 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2447s
+2025-01-25 17:44:39,820 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrb2tvZGFrIiwiZXhwIjoxNzM3ODI3MDc5fQ.G2VCGo5CJOHaEj869Ks0jZwxvvZYjFaAefP9YsChPTY
+2025-01-25 17:44:39,820 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-25 17:44:39,969 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrb2tvZGFrIiwiZXhwIjoxNzM3ODI3MDc5fQ.G2VCGo5CJOHaEj869Ks0jZwxvvZYjFaAefP9YsChPTY
+2025-01-25 17:44:39,970 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s

@@ -1,4 +1,6 @@
+import rsa
 import jwt
+import base64
 import logging
 import sqlite3
 from fastapi import FastAPI, Request, Depends, HTTPException, status, Response
@@ -35,7 +37,12 @@ app = FastAPI()
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
-
+with open("public.pem", "r") as f:
+    PUBLIC_KEY = f.read()
+    
+with open("private.pem", "rb") as f:
+    PRIVATE_KEY = rsa.PrivateKey.load_pkcs1(f.read())
+    
 app.mount("/output", StaticFiles(directory="output"), name="output")
 
 app.add_middleware(LoggerMiddleware)
@@ -68,17 +75,30 @@ def get_current_user(request: Request):
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Invalid token")
 
-@app.post("/signup", status_code=201)
+def decrypt_password(encrypted_password: str) -> str:
+    try:
+        logger.info(f"Received encrypted password: {encrypted_password}")
+        
+        # Decode from Base64
+        decrypted_bytes = rsa.decrypt(base64.b64decode(encrypted_password), PRIVATE_KEY)
+        return decrypted_bytes.decode()
+    
+    except Exception as e:
+        logger.error(f"Decryption failed: {str(e)}")
+        raise HTTPException(status_code=400, detail="Invalid encryption")
+
+@app.post("/signup")
 def signup(user: SignupRequest, db=Depends(get_db)):
+    decrypted_password = decrypt_password(user.password)  # Decrypt before hashing
+    hashed_password = get_password_hash(decrypted_password)  # Now hash it
+
     cursor = db.cursor()
-    hashed_password = get_password_hash(user.password)
     try:
         cursor.execute(
             "INSERT INTO users (username, email, full_name, hashed_password) VALUES (?, ?, ?, ?)",
             (user.username, user.email, user.full_name, hashed_password),
         )
         db.commit()
-        logger.info(f"User {user.username} signed up successfully.")
     except sqlite3.IntegrityError:
         raise HTTPException(
             status_code=400, detail="Username or email already exists"
@@ -143,6 +163,10 @@ def validate_token(request: Request):
         return {"message": "Token is valid"}
     except JWTError:
         raise HTTPException(status_code=401, detail="Invalid token")
+
+@app.get("/public-key")
+def get_public_key():
+    return {"public_key": PUBLIC_KEY}
 
 app.include_router(analysis.router)
 app.include_router(model.router)
