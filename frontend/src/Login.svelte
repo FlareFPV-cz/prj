@@ -1,6 +1,8 @@
 <script>
     import { writable } from "svelte/store";
+    import JSEncrypt from "jsencrypt";
 
+    let publicKey = null; // Store public key
     let username = "";
     let password = "";
     let email = "";
@@ -59,39 +61,38 @@
         }
     }
 
+    async function fetchPublicKey() {
+        try {
+            const response = await fetch(`${API_URL}/public-key`);
+            const data = await response.json();
+            publicKey = data.public_key;
+        } catch (e) {
+            console.error("Failed to fetch public key:", e);
+        }
+    }
 
     async function signup() {
-        error = "";
+        if (!publicKey) {
+            await fetchPublicKey();
+        }
 
-        if (password.length < 8 || !/\d/.test(password)) {
-            error = "Password must be at least 8 characters long and include a number.";
+        const encrypt = new JSEncrypt();
+        encrypt.setPublicKey(publicKey);
+        const encryptedPassword = encrypt.encrypt(password);
+
+        const response = await fetch(`${API_URL}/signup`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password: encryptedPassword, email, full_name }),
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            error = errorData.detail || "Signup failed";
             return;
         }
 
-        try {
-            const response = await fetch(`${API_URL}/signup`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ 
-                    username, 
-                    password, 
-                    email, 
-                    full_name 
-                }),
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                error = escapeHTML(errorData.detail) || "Signup failed";
-                return;
-            }
-
-            username = password = email = full_name = "";
-            error = "Signup successful! You can now log in.";
-            isSignup = false;
-        } catch (e) {
-            error = "An error occurred. Please try again.";
-        }
+        console.log("Signup successful!");
     }
 
     function toggleForm() {
@@ -131,7 +132,7 @@
         <p class="error">{error}</p>
     {/if}
 
-    <p class="toggle" on:click={toggleForm}>
+    <button class="toggle" on:click={toggleForm} type="button">
         {isSignup ? "Already have an account? Login here." : "Don't have an account? Sign up here."}
-    </p>
+    </button>
 </form>

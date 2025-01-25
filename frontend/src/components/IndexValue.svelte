@@ -13,7 +13,7 @@
     result = null;
 
     const auth = await checkAuth();
-    if (!auth) return; // Stop execution if not authenticated
+    if (!auth) return;
 
 
     try {

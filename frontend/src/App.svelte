@@ -98,12 +98,6 @@
     text-align: center;
   }
 
-  h1 {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 0.5em;
-  }
-
   p {
     font-size: 1.2em;
     color: #555;
