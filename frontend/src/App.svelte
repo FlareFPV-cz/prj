@@ -62,6 +62,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-radius: 5px;
   }
 
   .brand {
@@ -131,7 +132,7 @@
   </div>
 </nav>
 
-<main>
+<main style="display: flex; flex-direction: column;">
   <Router {routes} />
 </main>
 

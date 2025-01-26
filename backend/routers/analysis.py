@@ -1,23 +1,16 @@
 import numpy as np
 from PIL import Image
-# from typing import Callable
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
-from models.user import User
-from utils.auth import get_current_active_user
 from fastapi import APIRouter, Path, UploadFile, File, HTTPException, Depends, Query
 import httpx
 from httpx import Timeout
 
-
-
+from models.user import User
+from utils.auth import get_current_active_user
 from models.response.soil import SoilResponse
 from models.request.index import IndexRequest
-from models.response.analyze import (
-    AnalysisResponse,
-    IndexValueResponse,
-)
-
+from models.response.analyze import AnalysisResponse, IndexValueResponse
 from utils.image_processing import (
     calculate_ndvi, 
     calculate_evi, 
@@ -59,10 +52,13 @@ DEFAULT_VALUES = ["Q0.5", "Q0.05", "Q0.95", "mean", "uncertainty"]
 
 SOILGRIDS_API_URL = "https://rest.isric.org/soilgrids/v2.0/properties/query"
 
-
-@router.post("/analyze/{index_name}/", response_model=AnalysisResponse)
-async def dynamic_analysis(file: UploadFile = File(...), index_name: str = Path(...),
-                               current_user: User = Depends(get_current_active_user)):
+@router.post("/analyze/{index_name}/", response_model=AnalysisResponse, summary="Analyze an image to extract vegetation indices", description="Uploads an image and calculates a vegetation index such as NDVI, EVI, or SAVI.")
+async def dynamic_analysis(
+    file: UploadFile = File(..., description="Image file for analysis"), 
+    index_name: str = Path(..., description="Vegetation index to calculate (e.g., ndvi, evi, savi)"),
+    current_user: User = Depends(get_current_active_user)
+):
+    """Performs vegetation index analysis on the uploaded image."""
     if index_name not in INDEX_CALCULATIONS:
         raise HTTPException(
             status_code=400,
@@ -70,100 +66,58 @@ async def dynamic_analysis(file: UploadFile = File(...), index_name: str = Path(
         )
 
     calculation_function = INDEX_CALCULATIONS[index_name]
-
     return await perform_analysis(file, index_name, calculation_function)
 
-@router.post("/get-index-value/", response_model=IndexValueResponse)
-async def get_index_value(request: IndexRequest,
-                          current_user: User = Depends(get_current_active_user)):
-    x = request.x
-    y = request.y
-    index_type = request.index_type.lower()
+@router.post("/get-index-value/", response_model=IndexValueResponse, summary="Retrieve an index value from a precomputed array", description="Fetches the value of a specified vegetation index at given x, y coordinates.")
+async def get_index_value(
+    request: IndexRequest,
+    current_user: User = Depends(get_current_active_user)
+):
+    """Gets the index value from the precomputed vegetation index arrays."""
+    x, y, index_type = request.x, request.y, request.index_type.lower()
 
-    # Validate index_type
     if index_type not in INDEX_ARRAY_PATHS:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Invalid index type '{index_type}'. Supported indices: {', '.join(INDEX_ARRAY_PATHS.keys())}"
-        )
+        raise HTTPException(status_code=400, detail=f"Invalid index type '{index_type}'. Supported indices: {', '.join(INDEX_ARRAY_PATHS.keys())}")
 
-    # Load the appropriate index array
     try:
         index_array = np.load(INDEX_ARRAY_PATHS[index_type])
     except FileNotFoundError:
-        raise HTTPException(
-            status_code=404,
-            detail=f"The array file for '{index_type}' does not exist. Please ensure the analysis has been performed."
-        )
+        raise HTTPException(status_code=404, detail=f"The array file for '{index_type}' does not exist.")
 
-    # Validate coordinates
     if x < 0 or y < 0 or x >= index_array.shape[1] or y >= index_array.shape[0]:
-        raise HTTPException(
-            status_code=400,
-            detail="Coordinates out of bounds. Please provide valid (x, y) coordinates."
-        )
+        raise HTTPException(status_code=400, detail="Coordinates out of bounds.")
 
-    # Retrieve index value at the given coordinates
-    index_value = float(index_array[y, x])  # (y, x) for row-column indexing
+    return {"x": x, "y": y, "index_type": index_type.upper(), "index_value": float(index_array[y, x])}
 
-    return {
-        "x": x,
-        "y": y,
-        "index_type": index_type.upper(),
-        "index_value": index_value
-    }
-
-@router.get("/soil-data/", response_model=SoilResponse)
+@router.get("/soil-data/", response_model=SoilResponse, summary="Fetch soil properties from SoilGrids API", description="Retrieves soil data based on geographic coordinates, properties, depths, and values.")
 async def get_soil_data(
-    lon: float,
-    lat: float,
-    properties: list[str] = Query(DEFAULT_PROPERTIES),
-    depths: list[str] = Query(DEFAULT_DEPTHS),
-    values: list[str] = Query(DEFAULT_VALUES),
-    current_user: User = Depends(get_current_active_user) 
+    lon: float = Query(..., description="Longitude of the location"),
+    lat: float = Query(..., description="Latitude of the location"),
+    properties: list[str] = Query(DEFAULT_PROPERTIES, description="List of soil properties to fetch"),
+    depths: list[str] = Query(DEFAULT_DEPTHS, description="Soil depths for data retrieval"),
+    values: list[str] = Query(DEFAULT_VALUES, description="Statistical values to retrieve"),
+    current_user: User = Depends(get_current_active_user)
 ):
-    """
-    SoilGrids API
-    """
-    params = [
-        ("lon", lon),
-        ("lat", lat),
-    ]
-
-    params += [("property", prop) for prop in properties]
-    params += [("depth", depth) for depth in depths]
-    params += [("value", val) for val in values]
-
+    """Fetches soil data from SoilGrids API based on provided location and parameters."""
+    params = [("lon", lon), ("lat", lat)] + [("property", prop) for prop in properties] + [("depth", depth) for depth in depths] + [("value", val) for val in values]
     try:
-        timeout = Timeout(30.0)  # Increase timeout to 30 seconds
-        async with httpx.AsyncClient(timeout=timeout) as client:
+        async with httpx.AsyncClient(timeout=Timeout(30.0)) as client:
             response = await client.get(SOILGRIDS_API_URL, params=params)
             response.raise_for_status()
-    except httpx.HTTPStatusError as e:
-        raise HTTPException(
-            status_code=e.response.status_code,
-            detail=f"Error fetching soil data: {e.response.text}"
-        )
+            data = response.json()
     except Exception as e:
-        raise HTTPException(
-            status_code=500, detail=f"Unexpected error: {str(e)}"
-        )
-
-    try:
-        data = response.json()
-    except Exception:
-        raise HTTPException(
-            status_code=500, detail="Failed to parse JSON response from SoilGrids API"
-        )
-
+        raise HTTPException(status_code=500, detail=f"Error fetching soil data: {str(e)}")
     return {"message": "Soil data fetched successfully", "data": data}
 
-@router.get("/get-map/")
-async def get_map(index_type: str,
-                  current_user: User = Depends(get_current_active_user)):
-    file_path = "output/"+index_type+"_result.png"
-    return FileResponse(file_path, media_type="image/png")
+@router.get("/get-map/", summary="Retrieve a generated vegetation index map", description="Returns a PNG image file for a specified vegetation index.")
+async def get_map(
+    index_type: str = Query(..., description="Type of vegetation index to retrieve"),
+    current_user: User = Depends(get_current_active_user)
+):
+    """Fetches the vegetation index map image file."""
+    return FileResponse(f"output/{index_type}_result.png", media_type="image/png")
 
-@router.get("/protected-data")
-def get_protected_data(current_user=Depends(get_current_active_user)):
+@router.get("/protected-data", summary="Protected route", description="Returns a message if the user is authenticated.", tags=["Test"])
+def get_protected_data(current_user: User = Depends(get_current_active_user)):
+    """Endpoint that requires authentication to access."""
     return {"message": f"Hello {current_user.username}, this is protected data."}

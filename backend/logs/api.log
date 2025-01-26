@@ -458,3 +458,330 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-25 17:44:39,820 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
 2025-01-25 17:44:39,969 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJrb2tvZGFrIiwiZXhwIjoxNzM3ODI3MDc5fQ.G2VCGo5CJOHaEj869Ks0jZwxvvZYjFaAefP9YsChPTY
 2025-01-25 17:44:39,970 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-25 20:14:00,822 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0027s
+2025-01-25 20:14:00,939 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0172s
+2025-01-25 20:22:51,183 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:22:51,257 - ERROR - Prediction error: X has 1 features, but StandardScaler is expecting 8 features as input.
+2025-01-25 20:22:51,257 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 18.6265s
+2025-01-25 20:25:37,287 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:25:37,366 - ERROR - Prediction error: X has 14 features, but StandardScaler is expecting 8 features as input.
+2025-01-25 20:25:37,366 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 18.3860s
+2025-01-25 20:27:12,773 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-77.61306&lat=41.37297&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:27:12,820 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 11.0229s
+2025-01-25 20:29:38,449 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:29:38,502 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 12.2301s
+2025-01-25 20:29:54,228 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:29:54,275 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 10.1998s
+2025-01-25 20:30:58,836 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-75.30724&lat=53.78284&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:30:58,881 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 7.9584s
+2025-01-25 20:33:35,974 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=44.09367&lat=49.120705&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-25 20:33:36,028 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 11.8360s
+2025-01-25 20:41:09,475 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0016s
+2025-01-25 20:41:09,591 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0142s
+2025-01-25 20:44:04,240 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0043s
+2025-01-25 20:44:04,302 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0100s
+2025-01-25 20:44:58,750 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0047s
+2025-01-25 20:44:58,816 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0171s
+2025-01-25 20:45:53,663 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0019s
+2025-01-25 20:46:59,440 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0013s
+2025-01-25 20:46:59,498 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0130s
+2025-01-25 20:50:01,938 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0022s
+2025-01-25 20:50:01,985 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:50:01,989 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0114s
+2025-01-25 20:50:08,183 - INFO - Client: 127.0.0.1 | Method: GET | Path: /redocs | Status: 404 | Duration: 0.0009s
+2025-01-25 20:50:08,204 - INFO - Client: 127.0.0.1 | Method: GET | Path: /favicon.ico | Status: 404 | Duration: 0.0007s
+2025-01-25 20:50:12,059 - INFO - Client: 127.0.0.1 | Method: GET | Path: /redoc | Status: 200 | Duration: 0.0004s
+2025-01-25 20:50:12,296 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0006s
+2025-01-25 20:54:13,875 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0016s
+2025-01-25 20:54:13,915 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:54:13,918 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0073s
+2025-01-25 20:54:40,975 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0011s
+2025-01-25 20:54:41,027 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-25 20:54:41,029 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0101s
+2025-01-25 20:55:02,266 - INFO - Root endpoint accessed.
+2025-01-25 20:55:02,267 - INFO - Client: 127.0.0.1 | Method: GET | Path: / | Status: 200 | Duration: 0.0015s
+2025-01-26 09:27:37,816 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0038s
+2025-01-26 09:27:37,888 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-26 09:27:37,891 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0161s
+2025-01-26 09:29:01,029 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:30:36,465 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:30:36,516 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 7.9899s
+2025-01-26 09:32:45,578 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0032s
+2025-01-26 09:32:45,648 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-26 09:32:45,650 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0157s
+2025-01-26 09:33:12,936 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:33:12,991 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.0153s
+2025-01-26 09:37:29,964 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:37:30,020 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 10.0668s
+2025-01-26 09:42:20,477 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:42:20,528 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 9.1988s
+2025-01-26 09:44:53,565 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:44:53,617 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.4162s
+2025-01-26 09:48:55,429 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:48:55,479 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 7.8961s
+2025-01-26 09:53:06,315 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0006s
+2025-01-26 09:53:06,384 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-26 09:53:06,389 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0148s
+2025-01-26 09:53:11,466 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0005s
+2025-01-26 09:53:11,468 - INFO - Starting model retraining...
+2025-01-26 09:53:50,160 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 09:53:50,221 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.2969s
+2025-01-26 09:56:31,769 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0025s
+2025-01-26 09:56:31,771 - INFO - Starting model retraining...
+2025-01-26 09:56:50,904 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0006s
+2025-01-26 09:56:50,905 - INFO - Starting model retraining...
+2025-01-26 10:00:12,583 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.0017s
+2025-01-26 10:00:16,620 - INFO - 🚀 Model retraining started...
+2025-01-26 10:00:16,632 - INFO - 📂 Data loaded successfully.
+2025-01-26 10:00:16,632 - ERROR - ❌ Error during training: 'bdod_mean'
+2025-01-26 10:00:16,632 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0132s
+2025-01-26 10:03:25,558 - INFO - 🚀 Model retraining started...
+2025-01-26 10:03:25,562 - INFO - 📂 Data loaded successfully.
+2025-01-26 10:03:25,562 - INFO - 📝 Available columns: ['message', 'data']
+2025-01-26 10:03:25,562 - WARNING - ⚠️ Missing columns for bdod: bdod_mean or bdod_Q0.5
+2025-01-26 10:03:25,562 - WARNING - ⚠️ Missing columns for cec: cec_mean or cec_Q0.5
+2025-01-26 10:03:25,562 - WARNING - ⚠️ Missing columns for clay: clay_mean or clay_Q0.5
+2025-01-26 10:03:25,562 - WARNING - ⚠️ Missing columns for nitrogen: nitrogen_mean or nitrogen_Q0.5
+2025-01-26 10:03:25,562 - WARNING - ⚠️ Missing columns for ocd: ocd_mean or ocd_Q0.5
+2025-01-26 10:03:25,563 - WARNING - ⚠️ Missing columns for phh2o: phh2o_mean or phh2o_Q0.5
+2025-01-26 10:03:25,563 - WARNING - ⚠️ Missing columns for sand: sand_mean or sand_Q0.5
+2025-01-26 10:03:25,563 - WARNING - ⚠️ Missing columns for silt: silt_mean or silt_Q0.5
+2025-01-26 10:03:25,563 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:03:25,563 - ERROR - ❌ Error during training: "['crop_recommendation'] not found in axis"
+2025-01-26 10:03:25,564 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0058s
+2025-01-26 10:06:46,713 - INFO - 🚀 Model retraining started...
+2025-01-26 10:06:46,714 - ERROR - ❌ Error during training: 'values'
+2025-01-26 10:06:46,714 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0022s
+2025-01-26 10:08:54,158 - INFO - 🚀 Model retraining started...
+2025-01-26 10:08:54,160 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333                 None
+
+[1 rows x 29 columns]
+2025-01-26 10:08:54,174 - INFO - 📝 Available columns: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:08:54,176 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:08:54,176 - ERROR - ❌ Error during training: With n_samples=1, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-26 10:08:54,177 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0199s
+2025-01-26 10:10:54,471 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 404 | Duration: 0.0008s
+2025-01-26 10:14:14,176 - INFO - 🚀 Model retraining started...
+2025-01-26 10:14:14,179 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333                 None
+
+[1 rows x 29 columns]
+2025-01-26 10:14:14,191 - ERROR - ❌ Error during training: name 'preprocess_data' is not defined
+2025-01-26 10:14:14,191 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0156s
+2025-01-26 10:15:31,812 - INFO - 🚀 Model retraining started...
+2025-01-26 10:15:31,815 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333                 None
+
+[1 rows x 29 columns]
+2025-01-26 10:15:31,828 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:15:31,828 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:15:31,828 - ERROR - ❌ Error during training: 🚨 No valid target labels found in dataset!
+2025-01-26 10:15:31,828 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0169s
+2025-01-26 10:19:03,623 - INFO - 🚀 Model retraining started...
+2025-01-26 10:19:03,626 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:19:03,640 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:19:03,640 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:19:03,641 - ERROR - ❌ Error during training: With n_samples=1, test_size=0.5 and train_size=0.5, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-01-26 10:19:03,641 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0189s
+2025-01-26 10:20:38,926 - INFO - 🚀 Model retraining started...
+2025-01-26 10:20:38,930 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:20:38,942 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:20:38,942 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:20:38,943 - WARNING - ⚠️ Only one sample available, skipping train-test split and using full dataset for training.
+2025-01-26 10:20:38,943 - INFO - 🔍 Starting hyperparameter tuning...
+2025-01-26 10:20:38,943 - ERROR - ❌ Error during training: 'super' object has no attribute '__sklearn_tags__'
+2025-01-26 10:20:38,943 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0177s
+2025-01-26 10:23:51,792 - INFO - 🚀 Model retraining started...
+2025-01-26 10:23:51,794 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:23:51,805 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:23:51,805 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:23:51,805 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:23:51,805 - INFO - 🔍 Starting hyperparameter tuning...
+2025-01-26 10:23:51,806 - ERROR - ❌ Error during training: 'super' object has no attribute '__sklearn_tags__'
+2025-01-26 10:23:51,806 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0151s
+2025-01-26 10:26:39,600 - INFO - 🚀 Model retraining started...
+2025-01-26 10:26:39,603 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:26:39,616 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:26:39,616 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:26:39,616 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:26:39,616 - INFO - 🔍 Starting hyperparameter tuning...
+2025-01-26 10:26:39,616 - ERROR - ❌ Error during training: 'super' object has no attribute '__sklearn_tags__'
+2025-01-26 10:26:39,617 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0171s
+2025-01-26 10:30:11,617 - INFO - 🚀 Model retraining started...
+2025-01-26 10:30:11,620 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:30:11,632 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:30:11,632 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:30:11,633 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:30:11,633 - ERROR - ❌ Error during training: Cannot create a consistent method resolution
+order (MRO) for bases BaseEstimator, XGBClassifier
+2025-01-26 10:30:11,633 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0163s
+2025-01-26 10:31:08,012 - INFO - 🚀 Model retraining started...
+2025-01-26 10:31:08,013 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:31:08,022 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:31:08,022 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:31:08,022 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:31:08,022 - ERROR - ❌ Error during training: name 'BaseEstimator' is not defined
+2025-01-26 10:31:08,022 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0105s
+2025-01-26 10:32:22,562 - INFO - 🚀 Model retraining started...
+2025-01-26 10:32:22,565 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:32:22,579 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:32:22,579 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:32:22,579 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:32:22,579 - INFO - 🔍 Starting hyperparameter tuning...
+2025-01-26 10:32:22,580 - ERROR - ❌ Error during training: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=1.
+2025-01-26 10:32:22,581 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0193s
+2025-01-26 10:33:33,414 - INFO - 🚀 Model retraining started...
+2025-01-26 10:33:33,417 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:33:33,431 - INFO - 📝 Available columns before preprocessing: ['bdod_mean', 'bdod_Q0.5', 'cec_mean', 'cec_Q0.5', 'cfvo_mean', 'cfvo_Q0.5', 'clay_mean', 'clay_Q0.5', 'nitrogen_mean', 'nitrogen_Q0.5', 'ocd_mean', 'ocd_Q0.5', 'ocs_mean', 'ocs_Q0.5', 'phh2o_mean', 'phh2o_Q0.5', 'sand_mean', 'sand_Q0.5', 'silt_mean', 'silt_Q0.5', 'soc_mean', 'soc_Q0.5', 'wv0010_mean', 'wv0010_Q0.5', 'wv0033_mean', 'wv0033_Q0.5', 'wv1500_mean', 'wv1500_Q0.5', 'crop_recommendation']
+2025-01-26 10:33:33,431 - INFO - ✅ Data preprocessing completed.
+2025-01-26 10:33:33,431 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:33:33,432 - ERROR - ❌ Error during training: Invalid classes inferred from unique values of `y`.  Expected: [0], got ['Moderately Alkaline']
+2025-01-26 10:33:33,432 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0189s
+2025-01-26 10:40:10,586 - INFO - 🚀 Model retraining started...
+2025-01-26 10:40:10,589 - INFO - 📂 Data extracted successfully:    bdod_mean  bdod_Q0.5    cec_mean  cec_Q0.5  ...  wv0033_Q0.5  wv1500_mean  wv1500_Q0.5  crop_recommendation
+0      114.0      122.5  336.666667     233.5  ...        341.5        139.5   119.333333  Moderately Alkaline
+
+[1 rows x 29 columns]
+2025-01-26 10:40:10,601 - INFO - Labels encoded successfully: ['Moderately Alkaline']
+2025-01-26 10:40:10,601 - WARNING - ⚠️ Only one sample available, using full dataset for training without validation.
+2025-01-26 10:40:10,601 - INFO - 🔍 Starting hyperparameter tuning...
+2025-01-26 10:40:10,602 - ERROR - ❌ Error during training: 'super' object has no attribute '__sklearn_tags__'
+2025-01-26 10:40:10,602 - INFO - Client: 127.0.0.1 | Method: POST | Path: /retrain | Status: 200 | Duration: 0.0172s
+2025-01-26 10:41:41,633 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0034s
+2025-01-26 10:41:41,713 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-26 10:41:41,716 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0165s
+2025-01-26 10:42:09,464 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.27979&lat=40.20385&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 10:42:09,525 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.4532s
+2025-01-26 10:43:16,903 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 10:43:16,955 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.7488s
+2025-01-26 10:49:27,500 - INFO - Validating token: None
+2025-01-26 10:49:27,500 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-26 10:49:32,686 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-26 10:49:32,942 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 10:49:32,943 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2680s
+2025-01-26 10:49:32,947 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 10:49:32,948 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-26 10:49:33,020 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 10:49:33,020 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-26 10:50:02,817 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 10:50:02,872 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.0188s
+2025-01-26 10:55:06,229 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 10:55:06,284 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.1063s
+2025-01-26 11:01:52,024 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:01:52,025 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-26 11:02:59,596 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:02:59,597 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-26 11:03:11,314 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:03:11,315 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-26 11:04:26,429 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:04:26,429 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-26 11:05:53,054 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:05:53,057 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0034s
+2025-01-26 11:06:43,765 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:06:43,765 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-26 11:06:52,139 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:06:52,140 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-26 11:07:13,827 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:13,828 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0023s
+2025-01-26 11:07:15,498 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:15,498 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-26 11:07:20,388 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:20,389 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-26 11:07:22,252 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:22,253 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-26 11:07:23,830 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:23,831 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:23,831 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:23,831 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0033s
+2025-01-26 11:07:23,832 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-01-26 11:07:23,833 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-01-26 11:07:23,840 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0022s
+2025-01-26 11:07:32,993 - INFO - Logout request received. Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4ODU3Mn0.7R4NnSWqvTUe3PvEC4Z8tz1ZyT-QaNHBz5ui-5XBo5Q
+2025-01-26 11:07:32,998 - INFO - Token successfully invalidated and cookie cleared.
+2025-01-26 11:07:32,999 - INFO - Client: 127.0.0.1 | Method: POST | Path: /logout | Status: 200 | Duration: 0.0079s
+2025-01-26 11:07:35,589 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:07:35,670 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.3978s
+2025-01-26 11:07:37,712 - INFO - Validating token: None
+2025-01-26 11:07:37,713 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0020s
+2025-01-26 11:08:12,813 - INFO - Validating token: None
+2025-01-26 11:08:12,813 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0013s
+2025-01-26 11:08:21,548 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:08:21,549 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2506s
+2025-01-26 11:08:21,552 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:08:21,553 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-26 11:08:21,636 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:08:21,636 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-26 11:08:34,389 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:08:34,390 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-01-26 11:10:15,127 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:10:15,179 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.1796s
+2025-01-26 11:11:14,804 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:11:14,805 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-01-26 11:11:28,036 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:11:28,113 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.2910s
+2025-01-26 11:12:11,944 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:12:11,945 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-26 11:12:44,597 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:12:44,597 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-26 11:16:10,049 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:16:10,049 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:16:10,050 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0021s
+2025-01-26 11:16:10,051 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0021s
+2025-01-26 11:16:32,469 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:16:32,525 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 9.6551s
+2025-01-26 11:21:14,635 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:21:49,094 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:21:49,149 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.1766s
+2025-01-26 11:22:45,487 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:22:45,488 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-26 11:22:59,033 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:22:59,110 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.6139s
+2025-01-26 11:24:57,192 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczNzg4OTcwMX0.UfBHk20Yoj2c8vOawOmLzIYu9lPEH367dya2jDnIyIA
+2025-01-26 11:24:57,193 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-01-26 11:25:16,815 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0006s
+2025-01-26 11:25:16,914 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-26 11:25:16,917 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0169s
+2025-01-26 11:25:21,693 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=37.64105&lat=-12.82455&property=bdod&property=cec&property=clay&property=nitrogen&property=ocd&property=phh2o&property=sand&property=silt&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-01-26 11:25:21,743 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.3880s
+2025-01-26 11:25:26,368 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0011s
+2025-01-26 11:25:26,413 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0008s
+2025-01-26 11:26:17,020 - INFO - Root endpoint accessed.
+2025-01-26 11:26:17,021 - INFO - Client: 127.0.0.1 | Method: GET | Path: / | Status: 200 | Duration: 0.0027s
