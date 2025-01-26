@@ -95,7 +95,8 @@ async def get_soil_data(
     lat: float = Query(..., description="Latitude of the location"),
     properties: list[str] = Query(DEFAULT_PROPERTIES, description="List of soil properties to fetch"),
     depths: list[str] = Query(DEFAULT_DEPTHS, description="Soil depths for data retrieval"),
-    values: list[str] = Query(DEFAULT_VALUES, description="Statistical values to retrieve")
+    values: list[str] = Query(DEFAULT_VALUES, description="Statistical values to retrieve"),
+    current_user: User = Depends(get_current_active_user)
 ):
     """Fetches soil data from SoilGrids API based on provided location and parameters."""
     params = [("lon", lon), ("lat", lat)] + [("property", prop) for prop in properties] + [("depth", depth) for depth in depths] + [("value", val) for val in values]

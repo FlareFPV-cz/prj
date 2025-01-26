@@ -77,10 +77,15 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_scaled, y, test_size=0.2, random_state=42, stratify=y
 )
 
-# Handle class imbalance
-k_neighbors = max(1, min(5, min(y_train.value_counts()) - 1))
-smote = SMOTE(k_neighbors=k_neighbors, random_state=42)
+# Debug: Check class distribution before SMOTE
+print("Class Distribution Before SMOTE:\n", y_train.value_counts())
+
+# Handle class imbalance using SMOTE
+smote = SMOTE(sampling_strategy='not majority', random_state=42)
 X_train, y_train = smote.fit_resample(X_train, y_train)
+
+# Debug: Check class distribution after SMOTE
+print("Class Distribution After SMOTE:\n", y_train.value_counts())
 
 # Model training with GridSearchCV
 param_grid = {
@@ -90,7 +95,7 @@ param_grid = {
     'min_samples_leaf': [1, 2, 4]
 }
 
-rf_classifier = RandomForestClassifier(random_state=42)
+rf_classifier = RandomForestClassifier(random_state=42, class_weight='balanced')
 grid_search = GridSearchCV(
     estimator=rf_classifier,
     param_grid=param_grid,
