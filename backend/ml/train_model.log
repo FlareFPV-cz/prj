@@ -1,9 +1,60 @@
-2025-01-25 20:07:34,247 - INFO - Current working directory: /Users/kozeluh/Desktop/flarefpv/prj
-2025-01-25 20:07:34,260 - INFO - Scaler saved at backend/ml/scaler.pkl
-2025-01-25 20:07:40,443 - INFO - Best model saved at backend/ml/soil_model.pkl
-2025-01-26 09:41:15,926 - INFO - Current working directory: /Users/kozeluh/Desktop/flarefpv/prj
-2025-01-26 09:41:15,937 - INFO - Scaler saved at backend/ml/scaler.pkl
-2025-01-26 09:41:21,774 - INFO - Best model saved at backend/ml/soil_model.pkl
-2025-01-26 10:40:47,182 - INFO - Current working directory: /Users/kozeluh/Desktop/flarefpv/prj
-2025-01-26 10:40:47,188 - INFO - Scaler saved at backend/ml/scaler.pkl
-2025-01-26 10:40:53,153 - INFO - Best model saved at backend/ml/soil_model.pkl
+2025-01-27 22:22:02,279 - INFO - Creating target variable
+2025-01-27 22:22:02,283 - INFO - Initial class distribution: {'Other': 7, 'Calcareous': 3, 'Neutral_HighFertility': 1}
+2025-01-27 22:22:02,283 - INFO - Preprocessing data
+2025-01-27 22:22:02,443 - INFO - Post-preprocessing class distribution: {'Other': 7, 'Calcareous': 3, 'Neutral_HighFertility': 1}
+2025-01-27 22:22:02,444 - INFO - Saving processed data
+2025-01-27 22:22:02,446 - INFO - Starting model training
+2025-01-27 22:22:02,446 - ERROR - Classes below minimum samples: {'Other': 7, 'Calcareous': 3, 'Neutral_HighFertility': 1}
+2025-01-27 22:22:02,446 - INFO - Training completed
+2025-01-27 22:23:47,871 - INFO - Starting model training
+2025-01-27 22:23:47,872 - ERROR - Classes below minimum samples: {'Other': 17, 'Acidic_Organic': 13, 'Neutral_HighFertility': 11, 'Calcareous': 7, 'Clayey_PoorDrainage': 1}
+2025-01-27 22:23:47,872 - INFO - Training completed
+2025-01-27 22:24:57,280 - INFO - Starting model training
+2025-01-27 22:24:57,282 - ERROR - Training failed: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.2025-01-28 08:55:22,185 - INFO - Starting model training
+2025-01-28 08:55:22,187 - ERROR - Training failed: "['lon', 'lat'] not found in axis"
+Traceback (most recent call last):
+  File "/Users/kozeluh/Desktop/flarefpv/prj/backend/ml/test.py", line 247, in train_model
+    X = df.drop(columns=['soil_type', 'lon', 'lat'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/pandas/core/frame.py", line 5568, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/pandas/core/generic.py", line 4785, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/pandas/core/generic.py", line 4827, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 7070, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['lon', 'lat'] not found in axis"
+2025-01-28 08:55:22,192 - INFO - Training completed
+2025-01-28 08:58:09,802 - INFO - Starting model training
+2025-01-28 08:59:11,449 - INFO - Best Parameters: {'classifier__learning_rate': 0.05, 'classifier__max_depth': 3, 'classifier__n_estimators': 100, 'classifier__subsample': 0.8}
+2025-01-28 08:59:11,449 - INFO - Accuracy: 1.00
+2025-01-28 08:59:11,452 - INFO - Classification Report:
+                       precision    recall  f1-score   support
+
+       Acidic_Organic       1.00      1.00      1.00        20
+           Calcareous       1.00      1.00      1.00        20
+  Clayey_PoorDrainage       1.00      1.00      1.00        20
+Neutral_HighFertility       1.00      1.00      1.00        20
+                Other       1.00      1.00      1.00        20
+
+             accuracy                           1.00       100
+            macro avg       1.00      1.00      1.00       100
+         weighted avg       1.00      1.00      1.00       100
+
+2025-01-28 08:59:11,453 - INFO - Top Features:
+cfvo_100_200_mean      0.126143
+wv0010_0_5_Q0.5        0.103273
+silt_30_60_Q0.5        0.084138
+wv1500_30_60_mean      0.070246
+wv1500_60_100_mean     0.055719
+wv1500_100_200_Q0.5    0.042787
+wv1500_30_60_Q0.5      0.034190
+cfvo_15_30_mean        0.027551
+sand_15_30_mean        0.027181
+phh2o_0_5_mean         0.026575
+dtype: float64
+2025-01-28 08:59:11,453 - INFO - Training completed
