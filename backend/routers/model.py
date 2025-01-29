@@ -9,6 +9,7 @@ from models.user import User
 from models.response.pred import PredResponse
 from utils.auth import get_current_active_user
 from pydantic import BaseModel
+from transformers import pipeline  # Import the pipeline from transformers
 
 router = APIRouter()
 
@@ -32,12 +33,67 @@ DEFAULT_VALUES = ["Q0.5", "mean"]
 REQUIRED_FEATURES = ["bdod", "cec", "cfvo", "clay", "nitrogen", "ocd", "ocs", 
                     "phh2o", "sand", "silt", "soc", "wv0010", "wv0033", "wv1500"]
 
-class PredResponse(BaseModel):
-    condition: str
-    confidence: float
-    recommendation: str
-    soil_data: dict
+# Initialize the LLM pipeline
+llm_pipeline = pipeline("text-generation", model="gpt2") 
 
+
+def generate_llm_insights(prediction: str, confidence: float, recommendation: str, soil_data: dict) -> str:
+    """Generate structured soil insights using an LLM."""
+    try:
+        # Extract key soil layers with meaningful depth values
+        relevant_layers = {"wv0010"}
+        soil_summary = []
+
+        for layer in soil_data.get('data', {}).get('properties', {}).get('layers', []):
+            if layer["name"] in relevant_layers:
+                depths = layer.get("depths", [])[:2]  # Limit depth entries
+                for depth in depths:
+                    soil_summary.append(
+                        f"- {layer['name']} ({depth['label']}): Median {depth['values'].get('Q0.5', 'N/A')}, "
+                        f"Mean {depth['values'].get('mean', 'N/A')}"
+                    )
+
+        soil_summary_text = "\n".join(soil_summary) if soil_summary else "No relevant soil data available."
+
+        # Optimized prompt
+        prompt = (
+            f"Analyze the soil condition and provide structured insights:\n\n"
+            f"**Condition**: {prediction}\n"
+            f"**Confidence**: {confidence:.2f}\n"
+            f"**Recommendation**: {recommendation}\n\n"
+            f"**Soil Data**:\n{soil_summary_text}\n\n"
+            f"### Response Format (Provide detailed insights for each section):\n"
+            f"1. **Soil Properties Analysis** - Describe key properties of the soil.\n"
+            f"2. **Impact on Crop Growth** - Explain how these soil conditions affect plant health and yield.\n"
+            f"3. **Soil Management Strategies** - Provide actionable techniques to improve soil quality.\n"
+            f"4. **Additional Insights** - Any other relevant observations or warnings.\n"
+            f"### Begin your detailed response below:\n\n"
+        )
+
+        # Generate response
+        response = llm_pipeline(prompt, max_new_tokens=500, num_return_sequences=1)
+
+        # Validate response structure
+        if response and isinstance(response, list) and "generated_text" in response[0]:
+            generated_text = response[0]["generated_text"]
+
+            # Extract response content
+            split_marker = "### Begin your detailed response below:"
+            if split_marker in generated_text:
+                cleaned_response = generated_text.split(split_marker)[-1].strip()
+            else:
+                cleaned_response = generated_text.strip()
+
+            return cleaned_response if cleaned_response else "Error: Response was empty."
+
+        return "Error: No valid response generated."
+
+    except MemoryError:
+        return "Error: Insufficient memory to process the request."
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+    
 @router.get("/predict", response_model=PredResponse,     
             summary="Predict soil condition and recommend crops",
             description="""
@@ -112,11 +168,15 @@ async def predict_soil(lon: float,
             'Other': "Recommended: Legumes, Cover Crops (improve soil health)"
         }
 
+        # Generate additional insights using the LLM
+        llm_insights = generate_llm_insights(prediction, confidence, recommendations.get(prediction, "Consult an agronomist for custom advice"), soil_data)
+
         return {
             "condition": prediction,
             "confidence": float(confidence),
             "recommendation": recommendations.get(prediction, "Consult an agronomist for custom advice"),
-            "soil_data": soil_data
+            "soil_data": soil_data,
+            "llm_insights": llm_insights  # Add LLM insights to the response
         }
 
     except Exception as e:

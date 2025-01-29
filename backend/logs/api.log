@@ -996,3 +996,167 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-28 17:15:22,434 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 10.1962s
 2025-01-28 17:15:58,946 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODA4Mzk2MX0.U2T0gmIjoKdel7THHt_uFlGW0EoN3vS6cBpd5B2h_gs
 2025-01-28 17:15:58,946 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-01-29 08:34:10,525 - INFO - Validating token: None
+2025-01-29 08:34:10,525 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0010s
+2025-01-29 08:34:14,903 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 08:34:15,165 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:34:15,165 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2726s
+2025-01-29 08:34:15,169 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:34:15,169 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-29 08:34:15,242 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:34:15,242 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-29 08:34:21,255 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:34:21,256 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-29 08:35:12,296 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 500 Internal Server Error"
+2025-01-29 08:35:12,300 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.9244s
+2025-01-29 08:42:16,964 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:42:16,965 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:42:16,965 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:42:16,966 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0069s
+2025-01-29 08:42:16,966 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0061s
+2025-01-29 08:42:16,967 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0037s
+2025-01-29 08:42:17,862 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:42:17,863 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-29 08:42:19,373 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 500 Internal Server Error"
+2025-01-29 08:42:19,375 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 500 | Duration: 1.5019s
+2025-01-29 08:43:23,317 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODEzOTY1NX0.SQz62nodwXq1XYs_U8sa3k1OuPpOiQnBax0btGwGCcU
+2025-01-29 08:43:23,318 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0025s
+2025-01-29 10:47:05,875 - INFO - Validating token: None
+2025-01-29 10:47:05,876 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0019s
+2025-01-29 12:06:40,661 - INFO - Validating token: None
+2025-01-29 12:06:40,662 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0017s
+2025-01-29 12:06:40,671 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 12:06:40,927 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:06:40,927 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2597s
+2025-01-29 12:06:40,931 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:06:40,931 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-01-29 12:06:41,015 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:06:41,015 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-01-29 12:06:41,186 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMX0.Tz5AUtsDcysSEnLMAjYyt05Eyf1BV_VDAy4_tud8aXw
+2025-01-29 12:06:41,186 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2571s
+2025-01-29 12:06:43,631 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:06:43,632 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0021s
+2025-01-29 12:07:22,203 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:07:22,646 - ERROR - Prediction error: Input length of input_ids is 500, but `max_length` is set to 500. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+2025-01-29 12:07:22,646 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 8.8197s
+2025-01-29 12:08:39,175 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:08:41,569 - ERROR - Prediction error: Invalid buffer size: 18.80 GB
+2025-01-29 12:08:41,570 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 9.1656s
+2025-01-29 12:13:04,801 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:13:04,854 - ERROR - Prediction error: 'list' object has no attribute 'items'
+2025-01-29 12:13:04,855 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 8.6014s
+2025-01-29 12:13:38,462 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:13:38,508 - ERROR - Prediction error: 'list' object has no attribute 'items'
+2025-01-29 12:13:38,509 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 8.5071s
+2025-01-29 12:21:30,968 - INFO - Validating token: None
+2025-01-29 12:21:30,969 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0029s
+2025-01-29 12:21:34,876 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0007s
+2025-01-29 12:21:35,210 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-01-29 12:21:35,213 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0398s
+2025-01-29 12:26:21,577 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:34:04,912 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:37:26,117 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:37:34,836 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 14.8721s
+2025-01-29 12:38:45,504 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=16.8884&lat=49.0556&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:38:54,961 - ERROR - Prediction error: list index out of range
+2025-01-29 12:38:54,963 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 15.9047s
+2025-01-29 12:39:19,745 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:39:19,746 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-01-29 12:39:19,746 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:39:19,747 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-29 12:39:35,775 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:40:32,570 - ERROR - Prediction error: list index out of range
+2025-01-29 12:40:32,688 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 63.1679s
+2025-01-29 12:40:55,351 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:41:07,010 - ERROR - Prediction error: list index out of range
+2025-01-29 12:41:07,011 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 17.6971s
+2025-01-29 12:41:07,016 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:41:07,016 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:41:07,017 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0025s
+2025-01-29 12:41:07,017 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-01-29 12:42:46,075 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:42:46,076 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-01-29 12:43:18,260 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:43:18,260 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-29 12:43:24,561 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 12:43:24,563 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-29 12:43:49,793 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:44:00,098 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 16.1929s
+2025-01-29 12:45:55,739 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:46:03,064 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 14.9953s
+2025-01-29 12:48:45,569 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:48:51,360 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 12.1024s
+2025-01-29 12:53:10,113 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:53:16,394 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 12.2662s
+2025-01-29 12:56:00,872 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 12:56:06,904 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 12.7555s
+2025-01-29 13:03:04,945 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 13:03:13,223 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 14.7321s
+2025-01-29 13:25:39,043 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 13:25:39,043 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 13:25:41,424 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 13:42:27,962 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE1MjQwMH0.KdsJVwgMpukR8PtMkDYVGMk6qXODOV5ywNEVXzPfnHY
+2025-01-29 14:20:22,954 - INFO - Validating token: None
+2025-01-29 14:20:22,958 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0050s
+2025-01-29 14:21:32,190 - INFO - Validating token: None
+2025-01-29 14:21:32,193 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0039s
+2025-01-29 16:51:18,200 - INFO - Validating token: None
+2025-01-29 16:51:18,200 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0007s
+2025-01-29 16:51:27,510 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 16:51:27,752 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE2OTQ4N30.ibzW6kr1jksG1UTZ5w1gdcy17w16QiL1ymV1UCyq0dQ
+2025-01-29 16:51:27,753 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2499s
+2025-01-29 16:51:27,759 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE2OTQ4N30.ibzW6kr1jksG1UTZ5w1gdcy17w16QiL1ymV1UCyq0dQ
+2025-01-29 16:51:27,759 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-29 16:51:27,934 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE2OTQ4N30.ibzW6kr1jksG1UTZ5w1gdcy17w16QiL1ymV1UCyq0dQ
+2025-01-29 16:51:27,936 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0117s
+2025-01-29 16:51:32,763 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE2OTQ4N30.ibzW6kr1jksG1UTZ5w1gdcy17w16QiL1ymV1UCyq0dQ
+2025-01-29 16:51:32,765 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-01-29 16:51:48,910 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 16:51:57,059 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 15.9527s
+2025-01-29 16:56:12,050 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 16:56:12,814 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 9.1553s
+2025-01-29 16:57:03,021 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 16:57:05,032 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 9.8419s
+2025-01-29 16:58:15,370 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 16:58:23,430 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 18.1718s
+2025-01-29 17:00:41,092 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:00:49,646 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 16.8636s
+2025-01-29 17:01:34,349 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:01:42,481 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 16.2818s
+2025-01-29 17:02:14,131 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODE2OTQ4N30.ibzW6kr1jksG1UTZ5w1gdcy17w16QiL1ymV1UCyq0dQ
+2025-01-29 17:02:14,131 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-01-29 17:02:27,888 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:02:34,420 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 14.7548s
+2025-01-29 17:03:40,492 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:03:48,181 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 16.1735s
+2025-01-29 17:09:42,454 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:09:54,629 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 21.1392s
+2025-01-29 17:20:23,902 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:21:15,202 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 62.9809s
+2025-01-29 17:22:31,527 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:23:22,085 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 58.7642s
+2025-01-29 17:25:43,422 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:25:46,388 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 11.5924s
+2025-01-29 17:27:12,138 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:28:40,609 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 96.8711s
+2025-01-29 17:30:35,163 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:30:59,487 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 32.4033s
+2025-01-29 17:32:10,292 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:33:50,121 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-29 17:34:16,574 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 34.3253s

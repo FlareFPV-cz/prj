@@ -7,3 +7,4 @@ class PredResponse(BaseModel):
     confidence: float
     recommendation: str
     soil_data: SoilResponse
+    llm_insights: str

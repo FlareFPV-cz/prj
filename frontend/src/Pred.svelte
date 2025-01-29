@@ -9,6 +9,7 @@
     let confidence = 0;
     let soilData = {};
     let loading = false;
+    let llm = '';
     let error = '';
   
     async function fetchPrediction() {
@@ -25,6 +26,7 @@
         condition = data.condition;
         recommendation = data.recommendation;
         confidence = data.confidence;
+        llm = data.llm_insights;
         soilData = data.soil_data || {};
       } catch (err) {
         error = err.message;
@@ -106,6 +108,11 @@
           <h3><i class="fas fa-lightbulb"></i> Recommendations</h3>
           <p>{recommendation}</p>
         </div>
+        
+        <div>
+          <h3>GPT2</h3>
+          <p>{llm}</p>
+        </div>
   
         <div class="soil-details">
             <h3><i class="fas fa-microscope"></i> Soil Parameters</h3>
@@ -139,8 +146,8 @@
   
   <style>
     .card {
-      border-radius: 10px;
-      box-shadow: 1px 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
       padding: 2rem;
       display: flex;
       flex-direction: column;
