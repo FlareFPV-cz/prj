@@ -2,3 +2,4 @@ backend/users.db
 backend/utils/.env
 backend/private.pem
 backend/public.pem
+gpt2-soil-advisor
