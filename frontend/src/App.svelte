@@ -122,9 +122,10 @@
   <div class="nav-links">
     {#if $isAuthenticated}
       <a href="/">Home</a>
-      <a href="#/analysis">Analysis</a>
+      <a href="#/soil-health">Soil health</a>
       <a href="#/soil">Soil Map</a>
-      <a href="#/pred">Pred</a>
+      <a href="#/pred">Soil ML/AI</a>
+      <a href="#/crop-health">Crop health</a>
       <button on:click={logout}>Logout</button>
     {:else}
       <a href="#/login">Login</a>

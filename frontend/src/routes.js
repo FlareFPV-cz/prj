@@ -5,16 +5,16 @@ import Analysis from "./Analysis.svelte";
 // import IndexValue from "./IndexValue.svelte";
 import Soil from "./Soil.svelte";
 import Pred from "./Pred.svelte";
+import CropHealth from './CropHealth.svelte';
 
 
-const routes = {
+export const routes = {
   "/": Home, // Homepage
   "/login": Login,
-  "/analysis": Analysis, // Analysis page
-  // "/index-value": IndexValue, // Index Value calculator page
-  // "/map":Map,
+  "/soil-health": Analysis, // Analysis page
   "/soil":Soil,
-  "/pred":Pred
+  "/pred":Pred,
+  '/crop-health': CropHealth
 };
 
 export default routes;

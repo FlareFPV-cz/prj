@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import FileUpload from './components/FileUpload.svelte';
-  import IndexValue from './components/IndexValue.svelte';
   import Map from './components/Map.svelte';
   import { checkAuth } from "./utils/auth";
 
@@ -11,23 +10,24 @@
   });
 </script>
 
-<main>
-  <h1>Analysis Dashboard</h1>
+<main class="analysis-dashboard">
+  <h1>Soil Health Analysis Dashboard</h1>
 
-  <!-- File Upload Section -->
-  <section>
-    <FileUpload />
-  </section>
+  <div class="analysis-grid">
+    <!-- File Upload Section -->
+    <section class="analysis-section file-upload-section">
+      <FileUpload />
+    </section>
 
-  <hr>
-  
-  <section>
-    <IndexValue />
-  </section>
-
-  <hr>
-
-  <section>
-    <Map />
-  </section>
+    <!-- Map Section with Integrated Index Values -->
+    <section class="analysis-section map-section">
+      <Map />
+    </section>
+  </div>
 </main>
+
+<style>
+  .map-section {
+    grid-column: span 2;
+  }
+</style>

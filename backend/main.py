@@ -12,7 +12,7 @@ from datetime import timedelta
 from jose import JWTError
 from slowapi import Limiter
 from slowapi.util import get_remote_address
-from routers import analysis, model
+from routers import analysis, model, crop_health
 from utils.auth import (
     authenticate_user,
     create_access_token,
@@ -56,8 +56,6 @@ with open("public.pem", "r") as f:
 with open("private.pem", "rb") as f:
     PRIVATE_KEY = rsa.PrivateKey.load_pkcs1(f.read())
     
-app.mount("/output", StaticFiles(directory="output"), name="output")
-
 app.add_middleware(LoggerMiddleware)
 
 app.add_middleware(
@@ -67,6 +65,8 @@ app.add_middleware(
     allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
     allow_headers=["*"],  # Allow all headers
 )
+
+app.mount("/output", StaticFiles(directory="output"), name="output")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -189,6 +189,11 @@ app.include_router(
 app.include_router(
     model.router,
     tags=["ML Models"]
+)
+
+app.include_router(
+    crop_health.router,
+    tags=["Crop Health"]
 )
 
 @app.get("/", tags=["Test"])
