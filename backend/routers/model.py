@@ -9,75 +9,138 @@ from models.user import User
 from models.response.pred import PredResponse
 from utils.auth import get_current_active_user
 from pydantic import BaseModel
-from transformers import pipeline  # Import the pipeline from transformers
+from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer  # Import the pipeline from transformers
 
 router = APIRouter()
 
 # Paths
-MODEL_PATH = "./ml/soil_model.pkl"
-SCALER_PATH = "./ml/scaler.pkl"
-ENCODER_PATH = './ml/encoder.pkl'
+MODEL_PATH = "./ml/models/soil_model.pkl"
+SCALER_PATH = "./ml/models/scaler.pkl"
+ENCODER_PATH = './ml/models/encoder.pkl'
 
 # Load Model & Scaler
-if all(os.path.exists(p) for p in [MODEL_PATH, SCALER_PATH, ENCODER_PATH]):
-    model = joblib.load(MODEL_PATH)
-    scaler = joblib.load(SCALER_PATH)
-    encoder = joblib.load(ENCODER_PATH)  # Load the LabelEncoder
-    logging.info("Model artifacts loaded successfully")
-else:
-    model = scaler = encoder = None
-    logging.error("Model artifacts not found! Train the model first.")
+def load_model_artifacts():
+    try:
+        if not all(os.path.exists(p) for p in [MODEL_PATH, SCALER_PATH, ENCODER_PATH]):
+            logging.error("One or more model artifacts not found! Train the model first.")
+            return None, None, None
+
+        # Validate file sizes
+        if any(os.path.getsize(p) == 0 for p in [MODEL_PATH, SCALER_PATH, ENCODER_PATH]):
+            logging.error("One or more model artifacts are empty or corrupted!")
+            return None, None, None
+
+        # Load artifacts with explicit error handling
+        try:
+            model = joblib.load(MODEL_PATH)
+            scaler = joblib.load(SCALER_PATH)
+            encoder = joblib.load(ENCODER_PATH)
+        except (EOFError, pickle.UnpicklingError) as e:
+            logging.error(f"Error loading model artifacts: {str(e)}")
+            return None, None, None
+
+        # Validate loaded objects
+        if not all([model, scaler, encoder]):
+            logging.error("One or more model artifacts failed to load properly")
+            return None, None, None
+
+        logging.info("Model artifacts loaded and validated successfully")
+        return model, scaler, encoder
+    except Exception as e:
+        logging.error(f"Unexpected error loading model artifacts: {str(e)}")
+        return None, None, None
+
+model, scaler, encoder = load_model_artifacts()
 
 DEFAULT_DEPTHS = ["0-5cm", "5-15cm", "15-30cm", "30-60cm", "60-100cm", "100-200cm"]
 DEFAULT_VALUES = ["Q0.5", "mean"]
 REQUIRED_FEATURES = ["bdod", "cec", "cfvo", "clay", "nitrogen", "ocd", "ocs", 
                     "phh2o", "sand", "silt", "soc", "wv0010", "wv0033", "wv1500"]
 
-# Initialize the LLM pipeline
-llm_pipeline = pipeline("text-generation", model="gpt2") 
+# Initialize GPT-2 model with enhanced configuration
+tokenizer = AutoTokenizer.from_pretrained('gpt2')
+llm_model = AutoModelForCausalLM.from_pretrained('gpt2')
 
+# Configure system prompt and few-shot examples for better context
+SYSTEM_PROMPT = """
+You are an expert agricultural and soil science advisor. Analyze soil data and provide detailed, scientific recommendations.
+Consider multiple factors including soil composition, pH levels, nutrient content, and environmental conditions.
+Provide specific, actionable advice based on data-driven analysis.
+"""
+
+# Configure pipeline with optimized parameters
+llm_pipeline = pipeline(
+    "text-generation",
+    model=llm_model,
+    tokenizer=tokenizer,
+    framework="pt",
+    device="cpu",  # Change to "cuda" if GPU is available
+)
 
 def generate_llm_insights(prediction: str, confidence: float, recommendation: str, soil_data: dict) -> str:
-    """Generate structured soil insights using an LLM."""
+    """Generate structured soil insights using fine-tuned GPT-2 model."""
     try:
-        # Extract key soil layers with meaningful depth values
-        relevant_layers = {"wv0010"}
+        # Extract key soil properties with meaningful depth values
+        relevant_layers = {"phh2o", "clay", "sand", "soc", "nitrogen", "cec"}  # Key soil properties
         soil_summary = []
 
         for layer in soil_data.get('data', {}).get('properties', {}).get('layers', []):
             if layer["name"] in relevant_layers:
-                depths = layer.get("depths", [])[:2]  # Limit depth entries
+                depths = layer.get("depths", [])[:2]  # Focus on topsoil layers
                 for depth in depths:
-                    soil_summary.append(
-                        f"- {layer['name']} ({depth['label']}): Median {depth['values'].get('Q0.5', 'N/A')}, "
-                        f"Mean {depth['values'].get('mean', 'N/A')}"
-                    )
+                    value_q50 = depth['values'].get('Q0.5', 'N/A')
+                    value_mean = depth['values'].get('mean', 'N/A')
+                    if value_q50 != 'N/A' and value_mean != 'N/A':
+                        soil_summary.append(
+                            f"- {layer['name']} ({depth['label']}): Median {value_q50:.2f}, "
+                            f"Mean {value_mean:.2f}"
+                        )
 
         soil_summary_text = "\n".join(soil_summary) if soil_summary else "No relevant soil data available."
 
-        # Optimized prompt
-        prompt = (
-            f"Analyze the soil condition and provide structured insights:\n\n"
-            f"**Condition**: {prediction}\n"
-            f"**Confidence**: {confidence:.2f}\n"
-            f"**Recommendation**: {recommendation}\n\n"
-            f"**Soil Data**:\n{soil_summary_text}\n\n"
-            f"### Response Format (Provide detailed insights for each section):\n"
-            f"1. **Soil Properties Analysis** - Describe key properties of the soil.\n"
-            f"2. **Impact on Crop Growth** - Explain how these soil conditions affect plant health and yield.\n"
-            f"3. **Soil Management Strategies** - Provide actionable techniques to improve soil quality.\n"
-            f"4. **Additional Insights** - Any other relevant observations or warnings.\n"
-            f"### Begin your detailed response below:\n\n"
+        # Enhanced prompt with chain-of-thought reasoning and structured analysis
+        prompt = f"{SYSTEM_PROMPT}\n\nANALYSIS CONTEXT:\n{'-' * 40}\n"
+        
+        # Add soil classification context
+        prompt += f"Soil Classification:\n- Type: {prediction}\n- Confidence: {confidence:.2f}\n- Base Recommendation: {recommendation}\n\n"
+        
+        # Add detailed soil data analysis
+        prompt += f"Soil Composition Analysis:\n{soil_summary_text}\n\n"
+        
+        # Add structured reasoning steps
+        prompt += "ANALYSIS STEPS:\n"
+        prompt += "1. First, analyze the soil composition and its implications:\n"
+        prompt += "2. Then, evaluate nutrient levels and pH balance:\n"
+        prompt += "3. Next, consider water retention and drainage characteristics:\n"
+        prompt += "4. Finally, synthesize findings into practical recommendations:\n\n"
+        
+        # Add specific requirements
+        prompt += "REQUIRED INSIGHTS:\n"
+        prompt += "1. Soil Health Analysis:\n   - Current soil properties evaluation\n   - Limiting factors identification\n   - Improvement recommendations\n\n"
+        prompt += "2. Crop Recommendations:\n   - Primary crop suggestions with scientific rationale\n   - Rotation strategies\n   - Expected yields and conditions\n\n"
+        prompt += "3. Management Strategy:\n   - Immediate actions needed\n   - Long-term improvement plan\n   - Resource optimization techniques\n\n"
+        
+        prompt += "Please provide a detailed, scientific analysis following the above structure:\n"
+
+        # Generate response with optimized parameters
+        response = llm_pipeline(
+            prompt,
+            max_new_tokens=1000,  # Increased for more detailed response
+            num_return_sequences=1,
+            temperature=0.8,      # Slightly increased for more creative responses
+            top_p=0.92,          # Adjusted for better quality
+            top_k=50,            # Added for better token selection
+            do_sample=True,
+            repetition_penalty=1.2,  # Added to reduce repetition
+            pad_token_id=tokenizer.pad_token_id,
+            no_repeat_ngram_size=3  # Prevent repetition of phrases
         )
 
-        # Generate response
-        response = llm_pipeline(prompt, max_new_tokens=500, num_return_sequences=1)
+        # Process response
+        if response and isinstance(response, list) and len(response) > 0:
+            generated_text = response[0].get('generated_text', '')
 
-        # Validate response structure
-        if response and isinstance(response, list) and "generated_text" in response[0]:
-            generated_text = response[0]["generated_text"]
-
-            # Extract response content
+            # Extract response content after the prompt
             split_marker = "### Begin your detailed response below:"
             if split_marker in generated_text:
                 cleaned_response = generated_text.split(split_marker)[-1].strip()
@@ -88,9 +151,8 @@ def generate_llm_insights(prediction: str, confidence: float, recommendation: st
 
         return "Error: No valid response generated."
 
-    except MemoryError:
-        return "Error: Insufficient memory to process the request."
     except Exception as e:
+        logging.error(f"LLM generation error: {str(e)}")
         return f"Error: {str(e)}"
 
     

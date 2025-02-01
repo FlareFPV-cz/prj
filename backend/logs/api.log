@@ -1160,3 +1160,376 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-29 17:32:10,292 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
 2025-01-29 17:33:50,121 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
 2025-01-29 17:34:16,574 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 34.3253s
+2025-01-30 20:34:58,956 - INFO - Validating token: None
+2025-01-30 20:34:58,956 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0008s
+2025-01-30 20:35:15,178 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-30 20:35:15,439 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI2OTMxNX0.eTuwARTx-1yD460BfwFeG5-th_Y8Xqi-pxKfHhMI-uE
+2025-01-30 20:35:15,439 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2714s
+2025-01-30 20:35:15,442 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI2OTMxNX0.eTuwARTx-1yD460BfwFeG5-th_Y8Xqi-pxKfHhMI-uE
+2025-01-30 20:35:15,443 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-30 20:35:15,537 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI2OTMxNX0.eTuwARTx-1yD460BfwFeG5-th_Y8Xqi-pxKfHhMI-uE
+2025-01-30 20:35:15,538 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-30 20:35:16,842 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI2OTMxNX0.eTuwARTx-1yD460BfwFeG5-th_Y8Xqi-pxKfHhMI-uE
+2025-01-30 20:35:16,843 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0034s
+2025-01-30 20:35:32,286 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 20:35:46,740 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 21.2637s
+2025-01-30 20:37:15,223 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 20:37:40,485 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 31.3492s
+2025-01-30 20:40:10,915 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 20:40:33,788 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 31.7481s
+2025-01-30 21:15:02,481 - INFO - Validating token: None
+2025-01-30 21:15:02,481 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-01-30 21:15:11,830 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-30 21:15:12,089 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:15:12,089 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2684s
+2025-01-30 21:15:12,094 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:15:12,094 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-01-30 21:15:12,164 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:15:12,165 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-01-30 21:15:13,710 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:15:13,711 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-01-30 21:15:37,602 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 21:18:39,467 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:18:39,467 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-01-30 21:18:41,691 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODI3MTcxMn0.GrjKV353q5ldTueg22umJuGTxcSxSIyHzSbO83h2QQk
+2025-01-30 21:18:41,692 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-01-30 21:18:55,438 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 21:20:28,718 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 101.4390s
+2025-01-30 21:23:14,277 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-01-30 21:25:37,378 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 150.2311s
+2025-02-01 18:36:03,051 - INFO - Validating token: None
+2025-02-01 18:36:03,052 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0009s
+2025-02-01 18:36:03,293 - INFO - Validating token: None
+2025-02-01 18:36:03,293 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0005s
+2025-02-01 18:36:11,790 - INFO - Validating token: None
+2025-02-01 18:36:11,791 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 401 | Duration: 0.0030s
+2025-02-01 18:36:17,174 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-01 18:36:17,437 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:17,437 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2725s
+2025-02-01 18:36:17,444 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:17,444 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-02-01 18:36:17,525 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:17,526 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-02-01 18:36:19,471 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:19,472 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-02-01 18:36:20,557 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:20,558 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-02-01 18:36:32,999 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 18:36:33,076 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.5817s
+2025-02-01 18:36:53,365 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:53,366 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:36:53,366 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-02-01 18:36:53,366 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-02-01 18:37:08,048 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:37:08,049 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0009s
+2025-02-01 18:40:03,955 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:40:03,955 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0012s
+2025-02-01 18:40:31,004 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:40:31,004 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-02-01 18:47:13,516 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 404 | Duration: 0.0186s
+2025-02-01 18:47:56,195 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:47:56,195 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0010s
+2025-02-01 18:47:59,421 - INFO - Client: 127.0.0.1 | Method: GET | Path: /redoc | Status: 200 | Duration: 0.0009s
+2025-02-01 18:47:59,767 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-02-01 18:47:59,770 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0194s
+2025-02-01 18:48:04,886 - INFO - Client: 127.0.0.1 | Method: GET | Path: /docs | Status: 200 | Duration: 0.0009s
+2025-02-01 18:48:05,005 - INFO - Client: 127.0.0.1 | Method: GET | Path: /openapi.json | Status: 200 | Duration: 0.0006s
+2025-02-01 18:51:27,556 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:51:27,557 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0023s
+2025-02-01 18:51:37,224 - ERROR - Error processing image: mean() received an invalid combination of arguments - got (out=NoneType, dtype=NoneType, axis=NoneType, ), but expected one of:
+ * (*, torch.dtype dtype = None)
+ * (tuple of ints dim, bool keepdim = False, *, torch.dtype dtype = None)
+ * (tuple of names dim, bool keepdim = False, *, torch.dtype dtype = None)
+
+2025-02-01 18:51:37,225 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 500 | Duration: 0.5257s
+2025-02-01 18:53:24,041 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 18:53:24,042 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0019s
+2025-02-01 18:53:31,507 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.4891s
+2025-02-01 18:58:41,972 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.4672s
+2025-02-01 19:01:55,401 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.5076s
+2025-02-01 19:03:17,859 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:03:17,860 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-02-01 19:03:29,888 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:03:29,895 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0087s
+2025-02-01 19:03:37,870 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.5048s
+2025-02-01 19:04:39,991 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.4669s
+2025-02-01 19:08:51,260 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:08:51,261 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:11:22,047 - INFO - Client: 127.0.0.1 | Method: POST | Path: /assess-crop-health/ | Status: 200 | Duration: 0.4889s
+2025-02-01 19:11:37,190 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:11:37,191 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-02-01 19:12:51,766 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:12:51,766 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-02-01 19:12:52,797 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:12:52,798 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:12:52,798 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:12:52,799 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0040s
+2025-02-01 19:12:52,799 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0034s
+2025-02-01 19:12:52,800 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0042s
+2025-02-01 19:13:07,708 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 19:13:07,785 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 15.9947s
+2025-02-01 19:15:45,427 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:15:45,427 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:15:45,427 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:15:45,428 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-02-01 19:15:45,429 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0025s
+2025-02-01 19:15:45,431 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0042s
+2025-02-01 19:16:39,177 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:16:39,178 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-02-01 19:16:39,195 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:16:39,196 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:16:39,196 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:16:39,197 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0155s
+2025-02-01 19:16:39,197 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0097s
+2025-02-01 19:16:39,198 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0090s
+2025-02-01 19:16:45,132 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 0.0493s
+2025-02-01 19:16:46,552 - INFO - Client: 127.0.0.1 | Method: GET | Path: /output/ndvi_result.png | Status: 200 | Duration: 0.0064s
+2025-02-01 19:16:55,508 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:16:55,508 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-02-01 19:16:55,516 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0021s
+2025-02-01 19:19:05,865 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:19:05,866 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0024s
+2025-02-01 19:19:05,888 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0132s
+2025-02-01 19:19:05,895 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0016s
+2025-02-01 19:19:17,160 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0069s
+2025-02-01 19:19:18,714 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0048s
+2025-02-01 19:19:21,077 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0052s
+2025-02-01 19:22:42,908 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:22:42,908 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-02-01 19:23:19,723 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:23:19,723 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-02-01 19:23:19,726 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0010s
+2025-02-01 19:23:19,730 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0010s
+2025-02-01 19:23:36,219 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:23:36,220 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:23:36,220 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:23:36,220 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0024s
+2025-02-01 19:23:36,220 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-02-01 19:23:36,221 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0030s
+2025-02-01 19:23:36,228 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0042s
+2025-02-01 19:23:36,234 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0019s
+2025-02-01 19:25:05,372 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:25:05,372 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-02-01 19:25:53,137 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0035s
+2025-02-01 19:25:53,981 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0039s
+2025-02-01 19:25:58,615 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0053s
+2025-02-01 19:26:00,270 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0025s
+2025-02-01 19:26:02,460 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0357s
+2025-02-01 19:26:13,816 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0032s
+2025-02-01 19:26:30,762 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 1.8997s
+2025-02-01 19:26:40,982 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0027s
+2025-02-01 19:26:45,274 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0360s
+2025-02-01 19:27:02,415 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0195s
+2025-02-01 19:27:08,314 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0393s
+2025-02-01 19:27:12,283 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0029s
+2025-02-01 19:27:14,218 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0191s
+2025-02-01 19:27:31,752 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:27:31,760 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0085s
+2025-02-01 19:27:31,760 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:27:31,760 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:27:31,761 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:27:31,762 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0089s
+2025-02-01 19:27:31,762 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-02-01 19:27:31,762 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-02-01 19:27:31,765 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0017s
+2025-02-01 19:28:58,711 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:28:58,713 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:28:58,713 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:28:58,713 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0056s
+2025-02-01 19:28:58,713 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:28:58,714 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0019s
+2025-02-01 19:28:58,714 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-02-01 19:28:58,715 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-02-01 19:28:58,721 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0021s
+2025-02-01 19:29:18,083 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 1.8649s
+2025-02-01 19:29:26,349 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0017s
+2025-02-01 19:29:29,664 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0119s
+2025-02-01 19:31:41,263 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:41,263 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-02-01 19:31:43,608 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:43,614 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0056s
+2025-02-01 19:31:43,615 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:43,615 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:43,615 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:43,616 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0051s
+2025-02-01 19:31:43,616 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0051s
+2025-02-01 19:31:43,616 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0034s
+2025-02-01 19:31:43,619 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0009s
+2025-02-01 19:31:50,937 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:50,940 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0037s
+2025-02-01 19:31:50,940 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:50,940 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:50,940 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:50,942 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0046s
+2025-02-01 19:31:50,942 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0047s
+2025-02-01 19:31:50,942 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0049s
+2025-02-01 19:31:54,767 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:54,768 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:54,768 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:54,768 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:54,768 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0036s
+2025-02-01 19:31:54,769 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0042s
+2025-02-01 19:31:54,770 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0033s
+2025-02-01 19:31:54,770 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0033s
+2025-02-01 19:31:55,785 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:55,785 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:55,785 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:55,786 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:31:55,786 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0038s
+2025-02-01 19:31:55,786 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-02-01 19:31:55,786 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-02-01 19:31:55,788 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0046s
+2025-02-01 19:32:38,581 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:32:38,584 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-02-01 19:32:38,586 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:32:38,587 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:32:38,587 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:32:38,587 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0063s
+2025-02-01 19:32:38,588 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0063s
+2025-02-01 19:32:38,588 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0066s
+2025-02-01 19:32:38,590 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0011s
+2025-02-01 19:32:40,040 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0335s
+2025-02-01 19:32:40,754 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0203s
+2025-02-01 19:32:41,248 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0187s
+2025-02-01 19:33:06,444 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0353s
+2025-02-01 19:33:09,217 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0188s
+2025-02-01 19:33:09,703 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0146s
+2025-02-01 19:33:10,179 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0203s
+2025-02-01 19:33:11,830 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0092s
+2025-02-01 19:33:13,268 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0190s
+2025-02-01 19:33:13,869 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0204s
+2025-02-01 19:33:14,326 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0176s
+2025-02-01 19:33:14,718 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0188s
+2025-02-01 19:33:15,192 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0133s
+2025-02-01 19:33:15,708 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0205s
+2025-02-01 19:33:46,167 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:33:46,168 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:33:48,173 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:33:48,174 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-02-01 19:33:49,823 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:33:49,824 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0011s
+2025-02-01 19:33:52,836 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:33:52,837 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:34:00,944 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 19:34:01,018 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 14.8397s
+2025-02-01 19:34:03,906 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:34:03,908 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0021s
+2025-02-01 19:34:04,670 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:34:04,671 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:34:04,671 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0031s
+2025-02-01 19:34:04,671 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:34:04,672 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-02-01 19:34:04,672 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-02-01 19:34:04,676 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0017s
+2025-02-01 19:34:14,765 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 19:34:14,843 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.8213s
+2025-02-01 19:34:47,163 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:34:47,164 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-02-01 19:35:09,829 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:35:09,829 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-02-01 19:35:11,980 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:35:11,982 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:35:11,982 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0032s
+2025-02-01 19:35:11,982 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:35:11,984 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-02-01 19:35:11,984 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0027s
+2025-02-01 19:35:11,989 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0025s
+2025-02-01 19:35:45,429 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:35:45,430 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0019s
+2025-02-01 19:42:54,408 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:42:54,408 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:42:54,408 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:42:55,015 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzNDk3N30.CLrxGR70ZZny93buAMY4XWG3AvfjoOkaeldmNuBe-jE
+2025-02-01 19:43:00,603 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-01 19:43:00,843 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:00,844 - INFO - Client: 127.0.0.1 | Method: POST | Path: /login | Status: 200 | Duration: 0.2432s
+2025-02-01 19:43:00,849 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:00,849 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0004s
+2025-02-01 19:43:00,929 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:00,930 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:43:02,192 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:02,194 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0029s
+2025-02-01 19:43:02,194 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:02,194 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:43:02,195 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0022s
+2025-02-01 19:43:02,195 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-02-01 19:43:02,201 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0026s
+2025-02-01 19:43:17,928 - INFO - Client: 127.0.0.1 | Method: POST | Path: /analyze/ndvi/ | Status: 200 | Duration: 1.8646s
+2025-02-01 19:44:32,049 - INFO - Client: 127.0.0.1 | Method: POST | Path: /get-index-value/ | Status: 200 | Duration: 0.0380s
+2025-02-01 19:44:34,110 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:44:34,111 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0013s
+2025-02-01 19:44:48,462 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 19:44:48,539 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 14.4196s
+2025-02-01 19:46:06,739 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:46:06,740 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:46:06,740 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:46:06,740 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-02-01 19:46:06,741 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0018s
+2025-02-01 19:46:06,742 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0026s
+2025-02-01 19:46:06,745 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0018s
+2025-02-01 19:53:18,371 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:18,372 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-02-01 19:53:21,647 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:21,649 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0037s
+2025-02-01 19:53:21,649 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:21,651 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0028s
+2025-02-01 19:53:32,359 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:32,361 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:32,362 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0037s
+2025-02-01 19:53:32,362 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:53:32,363 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0045s
+2025-02-01 19:53:32,364 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0035s
+2025-02-01 19:53:32,370 - INFO - Client: 127.0.0.1 | Method: GET | Path: /get-map/ | Status: 200 | Duration: 0.0026s
+2025-02-01 19:54:04,046 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:04,047 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:04,048 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-02-01 19:54:04,048 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:04,048 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:04,048 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0020s
+2025-02-01 19:54:04,049 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0014s
+2025-02-01 19:54:04,049 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0017s
+2025-02-01 19:54:25,010 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:25,010 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0008s
+2025-02-01 19:54:25,012 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:25,012 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0005s
+2025-02-01 19:54:25,013 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:25,014 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0006s
+2025-02-01 19:54:25,014 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:25,014 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0007s
+2025-02-01 19:54:28,708 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:28,709 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:54:29,580 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:29,581 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0016s
+2025-02-01 19:54:31,843 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODQzODk4MH0.TUZZHylGq3syIS79R58tU6jbS4VlPfwoACDt5RE6q0s
+2025-02-01 19:54:31,844 - INFO - Client: 127.0.0.1 | Method: POST | Path: /validate-token | Status: 200 | Duration: 0.0015s
+2025-02-01 19:54:36,783 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.0028s
+2025-02-01 19:54:41,640 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-01 19:54:41,719 - INFO - Client: 127.0.0.1 | Method: GET | Path: /soil-data/ | Status: 200 | Duration: 13.0024s
+2025-02-01 19:55:00,301 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.0012s
+2025-02-01 19:55:16,144 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.0033s
+2025-02-01 19:55:56,615 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 500 | Duration: 0.0012s
+2025-02-01 20:04:59,244 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-02-01 20:05:00,762 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.2486s
+2025-02-01 20:06:46,094 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
+2025-02-01 20:06:46,526 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 6.7071s

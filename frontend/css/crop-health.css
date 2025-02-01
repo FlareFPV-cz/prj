@@ -1,0 +1,233 @@
+.crop-health-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.upload-section {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.file-label:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #ecf0f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #ecf0f1;
+    font-weight: bold;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.healthy { 
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.potential_issues_detected { 
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+.confidence, .severity {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: rgba(236, 240, 241, 0.1);
+    border-radius: 4px;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+.metric-item, .factor-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(236, 240, 241, 0.05);
+}
+
+.visualization {
+    grid-column: span 2;
+    order: -1;
+}
+
+.recommendations, .follow-up {
+    grid-column: span 1;
+}
+
+.health-status, .metrics {
+    grid-column: span 1;
+}
+
+.environmental-factors {
+    grid-column: span 2;
+}
+
+.recommendation-list, .action-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendation-list li, .action-list li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background-color: rgba(236, 240, 241, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.recommendation-list li:hover, .action-list li:hover {
+    background-color: rgba(236, 240, 241, 0.1);
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #bdc3c7;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #e74c3c;
+    padding: 1rem;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.affected-areas {
+    margin-top: 1rem;
+}
+
+.affected-areas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.affected-areas li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background-color: rgba(236, 240, 241, 0.05);
+    color: #bdc3c7;
+    transition: background-color 0.3s ease;
+}
+
+.affected-areas li:hover {
+    background-color: rgba(236, 240, 241, 0.1);
+}
+
+/* Chart customization */
+canvas#cropHealthChart {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(236, 240, 241, 0.05);
+}
+
+.metrics-visualization {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.metrics-svg {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.center-circle {
+    fill: rgba(52, 152, 219, 0.1);
+    stroke: #3498db;
+    stroke-width: 2;
+}
+
+.connection-line {
+    stroke: rgba(189, 195, 199, 0.3);
+    stroke-width: 2;
+}
+
+.metric-circle {
+    fill: rgba(46, 204, 113, 0.2);
+    stroke: #2ecc71;
+    stroke-width: 3;
+    transition: all 0.3s ease;
+}
+
+.metric-group:hover .metric-circle {
+    fill: rgba(46, 204, 113, 0.3);
+    stroke-width: 4;
+}
+
+.metric-value {
+    fill: #ecf0f1;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.metric-label {
+    fill: #bdc3c7;
+    font-size: 12px;
+}
+
+.metric-group:hover .metric-value,
+.metric-group:hover .metric-label {
+    fill: #ffffff;
+}

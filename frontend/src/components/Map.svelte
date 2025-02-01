@@ -7,9 +7,11 @@
   let indexValue = null;
   let bounds = null;
   let selectedIndexType = "ndvi";
+  let coordinates = { x: 0, y: 0 };
 
   const fetchIndexValue = async (x, y) => {
     try {
+      coordinates = { x, y };
       const response = await fetch("http://localhost:8000/get-index-value/", {
         method: "POST",
         credentials: "include",
@@ -54,21 +56,28 @@
     });
   };
 
-  const loadMapOverlay = () => {
+  const loadMapOverlay = async () => {
     const ndviMapUrl = `http://localhost:8000/get-map/?index_type=${selectedIndexType}`;
-    L.imageOverlay(ndviMapUrl, bounds).addTo(map);
+    const response = await fetch(ndviMapUrl, {
+      credentials: "include"
+    });
+    const blob = await response.blob();
+    const imageUrl = URL.createObjectURL(blob);
+    L.imageOverlay(imageUrl, bounds).addTo(map);
   };
 
   const updateMap = () => {
     if (map) {
-      map.eachLayer((layer) => map.removeLayer(layer)); // Remove existing layers
-      loadMapOverlay(); // Load new map overlay based on the selected index type
+      map.eachLayer((layer) => map.removeLayer(layer));
+      loadMapOverlay();
+      // Reset index value when changing index type
+      indexValue = null;
     }
   };
 
   onMount(async () => {
     const auth = await checkAuth();
-    if (!auth) return; // Stop execution if not authenticated
+    if (!auth) return;
     const img = new Image();
     img.src = `http://localhost:8000/get-map/?index_type=${selectedIndexType}`;
     img.onload = () => {
@@ -82,22 +91,72 @@
   <link rel="stylesheet" href="../css/map.css">
 </head>
 
-<div class="controls">
-  <label for="index-type">Select Index Type:</label>
-  <select id="index-type" bind:value={selectedIndexType} on:change={updateMap}>
-    <option value="ndvi">NDVI</option>
-    <option value="evi">EVI</option>
-    <option value="savi">SAVI</option>
-    <option value="arvi">ARVI</option>
-    <option value="gndvi">GNDVI</option>
-    <option value="msavi">MSAVI</option>
-  </select>
+<div class="map-container">
+  <div class="controls">
+    <label for="index-type">Select Index Type:</label>
+    <select id="index-type" bind:value={selectedIndexType} on:change={updateMap}>
+      <option value="ndvi">NDVI</option>
+      <option value="evi">EVI</option>
+      <option value="savi">SAVI</option>
+      <option value="arvi">ARVI</option>
+      <option value="gndvi">GNDVI</option>
+      <option value="msavi">MSAVI</option>
+    </select>
+  </div>
+
+  <div id="map"></div>
+
+  <div class="info-box">
+    <h3>{selectedIndexType.toUpperCase()} Map Information</h3>
+    {#if indexValue !== null}
+      <div class="index-details">
+        <p>Coordinates: ({coordinates.x}, {coordinates.y})</p>
+        <p>Index Value: {indexValue}</p>
+      </div>
+    {/if}
+  </div>
 </div>
 
-<div id="map"></div>
-<div class="info-box">
-  <h3>{selectedIndexType.toUpperCase()} Map</h3>
-  {#if indexValue !== null}
-    <p>Index Value: {indexValue}</p>
-  {/if}
-</div>
+<style>
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #222222;
+    border-radius: 8px;
+  }
+
+  select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #222222;
+  }
+
+  #map {
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .info-box {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .index-details {
+    margin-top: 0.5rem;
+  }
+
+  h3 {
+    margin: 0;
+    color: #ffffff;
+  }
+</style>
