@@ -1533,3 +1533,125 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-02-01 20:05:00,762 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 8.2486s
 2025-02-01 20:06:46,094 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=-72.0&lat=-9.0&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=mean "HTTP/1.1 200 OK"
 2025-02-01 20:06:46,526 - INFO - Client: 127.0.0.1 | Method: GET | Path: /predict | Status: 200 | Duration: 6.7071s
+2025-02-02 15:29:01,741 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:01
+Client IP: 127.0.0.1
+Method: GET
+Path: /
+Headers: {'host': 'localhost:8000', 'sec-fetch-site': 'none', 'connection': 'keep-alive', 'upgrade-insecure-requests': '1', 'sec-fetch-mode': 'navigate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15', 'accept-language': 'en-GB,en;q=0.9', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:01,742 - INFO - Root endpoint accessed.
+2025-02-02 15:29:01,742 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0019s
+Headers: {'content-length': '37', 'content-type': 'application/json'}
+
+2025-02-02 15:29:01,798 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:01
+Client IP: 127.0.0.1
+Method: GET
+Path: /apple-touch-icon-precomposed.png
+Headers: {'host': 'localhost:8000', 'accept': '*/*', 'accept-language': 'en-GB,en;q=0.9', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate', 'user-agent': 'Safari/20619.1.26.31.7 CFNetwork/1568.100.1.1.1 Darwin/24.0.0'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:01,799 - INFO - 
+Response Details:
+Status: 404
+Duration: 0.0009s
+Headers: {'content-length': '22', 'content-type': 'application/json'}
+
+2025-02-02 15:29:01,802 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:01
+Client IP: 127.0.0.1
+Method: GET
+Path: /apple-touch-icon.png
+Headers: {'host': 'localhost:8000', 'accept': '*/*', 'accept-language': 'en-GB,en;q=0.9', 'connection': 'keep-alive', 'accept-encoding': 'gzip, deflate', 'user-agent': 'Safari/20619.1.26.31.7 CFNetwork/1568.100.1.1.1 Darwin/24.0.0'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:01,802 - INFO - 
+Response Details:
+Status: 404
+Duration: 0.0004s
+Headers: {'content-length': '22', 'content-type': 'application/json'}
+
+2025-02-02 15:29:01,828 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:01
+Client IP: 127.0.0.1
+Method: GET
+Path: /favicon.ico
+Headers: {'host': 'localhost:8000', 'sec-fetch-site': 'same-origin', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'sec-fetch-mode': 'no-cors', 'accept': '*/*', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15', 'referer': 'http://localhost:8000/', 'sec-fetch-dest': 'image', 'accept-language': 'en-GB,en;q=0.9'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:01,828 - INFO - 
+Response Details:
+Status: 404
+Duration: 0.0004s
+Headers: {'content-length': '22', 'content-type': 'application/json'}
+
+2025-02-02 15:29:06,970 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:06
+Client IP: 127.0.0.1
+Method: GET
+Path: /docs
+Headers: {'host': 'localhost:8000', 'sec-fetch-site': 'none', 'connection': 'keep-alive', 'upgrade-insecure-requests': '1', 'sec-fetch-mode': 'navigate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15', 'accept-language': 'en-GB,en;q=0.9', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:06,971 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0006s
+Headers: {'content-length': '931', 'content-type': 'text/html; charset=utf-8'}
+
+2025-02-02 15:29:07,197 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:07
+Client IP: 127.0.0.1
+Method: GET
+Path: /openapi.json
+Headers: {'host': 'localhost:8000', 'sec-fetch-site': 'same-origin', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'sec-fetch-mode': 'cors', 'accept': 'application/json,*/*', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15', 'referer': 'http://localhost:8000/docs', 'sec-fetch-dest': 'empty', 'accept-language': 'en-GB,en;q=0.9'}
+Query Params: {}
+Body: 
+
+2025-02-02 15:29:07,213 - WARNING - email-validator not installed, email fields will be treated as str.
+To install, run: pip install email-validator
+2025-02-02 15:29:07,216 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0198s
+Headers: {'content-length': '17315', 'content-type': 'application/json'}
+
+2025-02-02 15:29:15,374 - INFO - 
+Request Details:
+Time: 2025-02-02 15:29:15
+Client IP: 127.0.0.1
+Method: POST
+Path: /login
+Headers: {'host': 'localhost:8000', 'accept': 'application/json', 'sec-fetch-site': 'same-origin', 'accept-language': 'en-GB,en;q=0.9', 'accept-encoding': 'gzip, deflate', 'sec-fetch-mode': 'cors', 'content-type': 'application/x-www-form-urlencoded', 'origin': 'http://localhost:8000', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15', 'referer': 'http://localhost:8000/docs', 'content-length': '94', 'connection': 'keep-alive', 'sec-fetch-dest': 'empty'}
+Query Params: {}
+Body: grant_type=password&username=janko&password=panko&scope=&client_id=string&client_secret=string
+
+2025-02-02 15:29:15,381 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-02 15:29:15,627 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODUxMDE1NX0.kWSjb5Kq0Qh6DpykfYMrbIY0Hs5AcZjm3fpmxLZpVZI
+2025-02-02 15:29:15,627 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.2536s
+Headers: {'content-length': '30', 'content-type': 'application/json', 'set-cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODUxMDE1NX0.kWSjb5Kq0Qh6DpykfYMrbIY0Hs5AcZjm3fpmxLZpVZI; Path=/; SameSite=Lax'}
+

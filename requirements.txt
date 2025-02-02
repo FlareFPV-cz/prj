@@ -12,3 +12,4 @@ torch
 torchvision 
 torchaudio
 shap
+email-validator
