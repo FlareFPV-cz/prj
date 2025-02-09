@@ -3,6 +3,7 @@
   import L from "leaflet";
   import "leaflet/dist/leaflet.css";
   import { checkAuth } from "./utils/auth";
+  import SoilAnalysisChart from "./components/SoilAnalysisChart.svelte";
 
   let map;
   let lon = 15.5, lat = 49.75;
@@ -99,15 +100,15 @@
       <p>Loading soil data...</p>
     </div>
   {:else if errorMessage}
-    <div class="info-panel">
-      <p class="error-message">{errorMessage}</p>
+    <div class="error-panel">
+      <p>{errorMessage}</p>
     </div>
   {:else if soilData}
+    <SoilAnalysisChart {soilData} />
     <div class="info-panel">
       <h2>Soil Data</h2>
       <p><strong>Type:</strong> {soilData.type}</p>
-      <p><strong>Coordinates:</strong> [{soilData.geometry.coordinates.join(", ")}]
-      </p>
+      <p><strong>Coordinates:</strong> [{soilData.geometry.coordinates.join(", ")}]</p>
       <h3>Layers:</h3>
       {#each soilData.properties.layers as layer}
         <button class="collapsible" on:click="{toggleContent}">{layer.name}</button>

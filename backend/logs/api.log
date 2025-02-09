@@ -1655,3 +1655,284 @@ Status: 200
 Duration: 0.2536s
 Headers: {'content-length': '30', 'content-type': 'application/json', 'set-cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODUxMDE1NX0.kWSjb5Kq0Qh6DpykfYMrbIY0Hs5AcZjm3fpmxLZpVZI; Path=/; SameSite=Lax'}
 
+2025-02-06 21:34:21,015 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:21
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+Query Params: {}
+
+2025-02-06 21:34:21,016 - INFO - Validating token: None
+2025-02-06 21:34:21,016 - INFO - 
+Response Details:
+Status: 401
+Duration: 0.0009s
+Headers: {'content-length': '25', 'content-type': 'application/json'}
+
+2025-02-06 21:34:26,833 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:26
+Client IP: 127.0.0.1
+Method: POST
+Path: /login
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '29', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'content-type': 'application/x-www-form-urlencoded', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+Query Params: {}
+
+2025-02-06 21:34:26,839 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-06 21:34:27,108 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA
+2025-02-06 21:34:27,108 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.2756s
+Headers: {'content-length': '30', 'content-type': 'application/json', 'set-cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA; Path=/; SameSite=Lax'}
+
+2025-02-06 21:34:27,112 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:27
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA'}
+Query Params: {}
+
+2025-02-06 21:34:27,112 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA
+2025-02-06 21:34:27,112 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0005s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-06 21:34:27,214 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:27
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA'}
+Query Params: {}
+
+2025-02-06 21:34:27,214 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA
+2025-02-06 21:34:27,218 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0043s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-06 21:34:46,322 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:46
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA'}
+Query Params: {}
+
+2025-02-06 21:34:46,322 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA
+2025-02-06 21:34:46,323 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0017s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-06 21:34:46,345 - INFO - 
+Request Details:
+Time: 2025-02-06 21:34:46
+Client IP: 127.0.0.1
+Method: GET
+Path: /soil-data/
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA'}
+Query Params: {'lon': '15.5', 'lat': '49.75'}
+
+2025-02-06 21:35:17,715 - INFO - 
+Response Details:
+Status: 500
+Duration: 31.3703s
+Headers: {'content-length': '39', 'content-type': 'application/json'}
+
+2025-02-06 21:36:46,593 - INFO - 
+Request Details:
+Time: 2025-02-06 21:36:46
+Client IP: 127.0.0.1
+Method: GET
+Path: /soil-data/
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczODg3NzY2N30.ShU4zBKX6PoGrvLZ6WpCYkAONXa5_TJ0RWWRzrajdMA'}
+Query Params: {'lon': '14.567871093750002', 'lat': '49.90171121726089'}
+
+2025-02-06 21:37:18,386 - INFO - 
+Response Details:
+Status: 500
+Duration: 31.7932s
+Headers: {'content-length': '39', 'content-type': 'application/json'}
+
+2025-02-09 22:14:20,225 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:20
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-purpose': 'prefetch;prerender', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'purpose': 'prefetch', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+Query Params: {}
+
+2025-02-09 22:14:20,226 - INFO - Validating token: None
+2025-02-09 22:14:20,226 - INFO - 
+Response Details:
+Status: 401
+Duration: 0.0012s
+Headers: {'content-length': '25', 'content-type': 'application/json'}
+
+2025-02-09 22:14:28,539 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:28
+Client IP: 127.0.0.1
+Method: POST
+Path: /login
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '29', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'content-type': 'application/x-www-form-urlencoded', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
+Query Params: {}
+
+2025-02-09 22:14:28,549 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/kozeluh/miniconda3/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-09 22:14:28,814 - INFO - Generated access token for user janko: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:28,814 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.2755s
+Headers: {'content-length': '30', 'content-type': 'application/json', 'set-cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ; Path=/; SameSite=Lax'}
+
+2025-02-09 22:14:28,819 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:28
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:28,819 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:28,819 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0005s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:28,905 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:28
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:28,906 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:28,906 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0012s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:32,002 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:32
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:32,004 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:32
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:32,006 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:32,007 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:32
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:32,009 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:32,009 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0079s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:32,010 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:32,011 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0071s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:32,013 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0057s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:32,015 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:32
+Client IP: 127.0.0.1
+Method: GET
+Path: /get-map/
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'no-cors', 'sec-fetch-dest': 'image', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {'index_type': 'ndvi'}
+
+2025-02-09 22:14:32,018 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0034s
+Headers: {'content-type': 'image/png', 'content-length': '2618233', 'last-modified': 'Sat, 01 Feb 2025 18:43:17 GMT', 'etag': '"f6813b24f6b3b4bdbbec452a5e49f221"'}
+
+2025-02-09 22:14:34,903 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:34
+Client IP: 127.0.0.1
+Method: POST
+Path: /validate-token
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'content-length': '0', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {}
+
+2025-02-09 22:14:34,903 - INFO - Validating token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ
+2025-02-09 22:14:34,903 - INFO - 
+Response Details:
+Status: 200
+Duration: 0.0007s
+Headers: {'content-length': '28', 'content-type': 'application/json'}
+
+2025-02-09 22:14:34,916 - INFO - 
+Request Details:
+Time: 2025-02-09 22:14:34
+Client IP: 127.0.0.1
+Method: GET
+Path: /soil-data/
+Headers: {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"', 'sec-ch-ua-mobile': '?0', 'accept': '*/*', 'origin': 'http://localhost:5173', 'sec-fetch-site': 'same-site', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:5173/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8', 'cookie': 'access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYW5rbyIsImV4cCI6MTczOTEzOTI2OH0._pZre7dQI6sx1au9eqeWNKPs6UZY39ww0BXOuf0O9IQ'}
+Query Params: {'lon': '15.5', 'lat': '49.75'}
+
+2025-02-09 22:14:49,615 - INFO - HTTP Request: GET https://rest.isric.org/soilgrids/v2.0/properties/query?lon=15.5&lat=49.75&property=bdod&property=cec&property=cfvo&property=clay&property=nitrogen&property=ocd&property=ocs&property=phh2o&property=sand&property=silt&property=soc&property=wv0010&property=wv0033&property=wv1500&depth=0-5cm&depth=0-30cm&depth=5-15cm&depth=15-30cm&depth=30-60cm&depth=60-100cm&depth=100-200cm&value=Q0.5&value=Q0.05&value=Q0.95&value=mean&value=uncertainty "HTTP/1.1 200 OK"
+2025-02-09 22:14:49,696 - INFO - 
+Response Details:
+Status: 200
+Duration: 14.7801s
+Headers: {'content-length': '14943', 'content-type': 'application/json'}
+
